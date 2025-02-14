@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Menu",
+    "isTitle": true
+  },
+  {
+    "name": "VAPT Dashboard",
+    "url": "index.html",
+    "icon": "grid-fill"
+  },
+  {
+    "name": "Hardening Dashboard",
+    "key": "hardening",
+    "icon": "bi bi-shield-shaded",
+    "url": "hardeningIndex.html"
+  },
+  {
+    "name": "Threat Intelligence",
+    "key": "threat-intel",
+    "icon": "bi bi-fingerprint",
+    "url": "TIindex.html"
+  },
+  {
+    "name": "User Management",
+    "key": "user",
+    "icon": "bi bi-people-fill",
+    "submenu": [
+      {
+        "name": "Manage User",
+        "url": "manageUser.html"
+      },
+      {
+        "name": "Manage Owner",
+        "url": "manageOwner.html"
+      }
+    ]
+  },
+  {
+    "name": "Project Management",
+    "key": "project",
+    "icon": "bi bi-briefcase-fill",
+    "submenu": [
+      {
+        "name": "VAPT",
+        "url": "manageProject.html"
+      },
+      {
+        "name": "Hardening",
+        "url": "manageHardening.html"
+      }
+    ]
+  },
+  {
+    "name": "Site Configuration",
+    "key": "system",
+    "icon": "bi bi-tools",
+    "submenu": [
+      {
+        "name": "Email Setting",
+        "url": "manageProject.html"
+      },
+      {
+        "name": "Site Setting",
+        "url": "manageProject.html"
+      }
+    ]
+  }
+  ,
+  {
+    "name": "Audit Log",
+    "key": "system",
+    "icon": "bi bi-unlock-fill",
+    "submenu": [
+      {
+        "name": "Assessment Log",
+        "url": "manageProject.html"
+      }
+    ]
+  }
+]

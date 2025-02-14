@@ -1,0 +1,76 @@
+{% set title = 'Hardening Dashboard' %}
+{% set filename = 'hardeningIndex.html' %}
+
+{% extends 'src/layouts/master.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/scss/iconly.scss">
+{% endblock %}
+
+{% block content %}
+<div class="page-heading">
+    <h3>Hardening Dashboard</h3>
+</div> 
+<div class="page-content">
+    <section class="row">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>OS Hardening 2025</h4>
+                </div>
+                <div class="card-body">
+                    <div id="radialGradient"></div>
+                    <div class="buttons" align="right">
+                        <a href="hardeningproject.html" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>DB Hardening 2025</h4>
+                </div>
+                <div class="card-body">
+                     <div id="radialGradient2"></div>
+                    <div class="buttons" align="right">
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>ND Hardening 2025</h4>
+                </div>
+                <div class="card-body">
+                    <div id="radialGradient3"></div>
+                    <div class="buttons" align="right">
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Security Device Hardening 2025</h4>
+                </div>
+                <div class="card-body">
+                    <div id="radialGradient4"></div>
+                    <div class="buttons" align="right">
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="assets/extensions/dayjs/dayjs.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/static/js/pages/ui-apexchart.js"></script>
+{% endblock %}

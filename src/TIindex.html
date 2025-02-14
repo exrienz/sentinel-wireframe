@@ -1,0 +1,1096 @@
+{% set title = 'Threat Intelligence Dashboard' %}
+{% set filename = 'TIindex.html' %}
+
+{% extends 'src/layouts/master.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/scss/iconly.scss">
+{% endblock %}
+
+{% block content %}
+<div class="page-heading">
+    <h3>OSINT Threat-Intel Dashboard</h3>
+</div> 
+<div class="page-content">
+    <section class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Latest Nessus CVE Feed</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped mt-4">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Wed, 22 Jan 2025 22:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-12477" target="_blank">CVE-2024-12477</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The Avada Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's shortcodes in all versions up to, and including, 3.11.11 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-12477">https://www.tenable.com/cve/CVE-2024-12477</a></p></td></tr><tr><td>Wed, 22 Jan 2025 21:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-56924" target="_blank">CVE-2024-56924</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A Cross Site Request Forgery (CSRF) vulnerability in Code Astro Internet banking system 2.0.0 allows remote attackers to execute arbitrary JavaScript on the admin page (pages_account), potentially leading to unauthorized actions such as changing account settings or stealing sensitive user information. This vulnerability occurs due to improper validation of user requests, which enables attackers to exploit the system by tricking the admin user into executing malicious scripts.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-56924">https://www.tenable.com/cve/CVE-2024-56924</a></p></td></tr><tr><td>Wed, 22 Jan 2025 21:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-56923" target="_blank">CVE-2024-56923</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Stored Cross-Site Scripting (XSS) in the Categorization Option of My Subscriptions Functionality in Silverpeas Core 6.4.1 allows a remote attacker to execute arbitrary JavaScript code. This is achieved by injecting a malicious payload into the Name field of a subscription. The attack can lead to session hijacking, data theft, or unauthorized actions when an admin user views the affected subscription.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-56923">https://www.tenable.com/cve/CVE-2024-56923</a></p></td></tr><tr><td>Wed, 22 Jan 2025 20:15:30 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0612" target="_blank">CVE-2025-0612</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Out of bounds memory access in V8 in <span style="background-color: #FFFF00">Google Chrome</span> prior to 132.0.6834.110 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0612">https://www.tenable.com/cve/CVE-2025-0612</a></p></td></tr><tr><td>Wed, 22 Jan 2025 20:15:30 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0611" target="_blank">CVE-2025-0611</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Object corruption in V8 in <span style="background-color: #FFFF00">Google Chrome</span> prior to 132.0.6834.110 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0611">https://www.tenable.com/cve/CVE-2025-0611</a></p></td></tr><tr><td>Wed, 22 Jan 2025 20:15:30 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-56914" target="_blank">CVE-2024-56914</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>D-Link DSL-3782 v1.01 is vulnerable to Buffer Overflow in /New_GUI/ParentalControl.asp.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-56914">https://www.tenable.com/cve/CVE-2024-56914</a></p></td></tr><tr><td>Wed, 22 Jan 2025 19:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-9310" target="_blank">CVE-2024-9310</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>By utilizing software-defined radios and a custom low-latency processing pipeline, RF signals with spoofed location data can be transmitted to aircraft targets. This can lead to the appearance of fake aircraft on displays and potentially trigger undesired Resolution Advisories (RAs).</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-9310">https://www.tenable.com/cve/CVE-2024-9310</a></p></td></tr><tr><td>Wed, 22 Jan 2025 19:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-11166" target="_blank">CVE-2024-11166</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>For TCAS II systems using transponders compliant with MOPS earlier than RTCA DO-181F, an attacker can impersonate a ground station and issue a Comm-A Identity Request. This action can set the Sensitivity Level Control (SLC) to the lowest setting and disable the Resolution Advisory (RA), leading to a denial-of-service condition.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-11166">https://www.tenable.com/cve/CVE-2024-11166</a></p></td></tr><tr><td>Wed, 22 Jan 2025 18:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23047" target="_blank">CVE-2025-23047</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Cilium is a networking, observability, and security solution with an eBPF-based dataplane. An insecure default `Access-Control-Allow-Origin` header value could lead to sensitive data exposure for users of Cilium versions 1.14.0 through 1.14.7, 1.15.0 through 1.15.11, and 1.16.0 through 1.16.4 who deploy Hubble UI using either Cilium CLI or via the Cilium Helm chart. A user with access to a Hubble UI instance affected by this issue could leak configuration details about the <span style="background-color: #FFFF00">Kubernetes</span> cluster which Hubble UI is monitoring, including node names, IP addresses, and other metadata about workloads and the cluster networking configuration. In order for this vulnerability to be exploited, a victim would have to first visit a malicious page. This issue is fixed in Cilium v1.14.18, v1.15.12, and v1.16.5. As a workaround, users who deploy Hubble UI using the Cilium Helm chart directly can remove the CORS headers from the Helm template as shown in the patch from commit a3489f190ba6e87b5336ee685fb6c80b1270d06d.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23047">https://www.tenable.com/cve/CVE-2025-23047</a></p></td></tr><tr><td>Wed, 22 Jan 2025 18:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0651" target="_blank">CVE-2025-0651</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Improper Privilege Management vulnerability in Cloudflare WARP on <span style="background-color: #FFFF00">Windows</span> allows File Manipulation. User with a low system privileges can create a set of symlinks inside the C:\ProgramData\Cloudflare\warp-diag-partials folder. After triggering the 'Reset all settings" option the WARP service will delete the files that the symlink was pointing to. Given the WARP service operates with System privileges this might lead to deleting files owned by the System user. This issue affects WARP: before 2024.12.492.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0651">https://www.tenable.com/cve/CVE-2025-0651</a></p></td></tr><tr><td>Wed, 22 Jan 2025 18:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-55957" target="_blank">CVE-2024-55957</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In Thermo Fisher Scientific Xcalibur before 4.7 SP1 and Thermo Foundation Instrument Control Software (ICSW) before 3.1 SP10, the driver packages have a local privilege escalation vulnerability due to improper access control permissions on <span style="background-color: #FFFF00">Windows</span> systems.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-55957">https://www.tenable.com/cve/CVE-2024-55957</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24403" target="_blank">CVE-2025-24403</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A missing permission check in <span style="background-color: #FFFF00">Jenkins</span> Azure Service Fabric Plugin 1.6 and earlier allows attackers with Overall/Read permission to enumerate credentials IDs of Azure credentials stored in <span style="background-color: #FFFF00">Jenkins</span>.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24403">https://www.tenable.com/cve/CVE-2025-24403</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24402" target="_blank">CVE-2025-24402</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A cross-site request forgery (CSRF) vulnerability in <span style="background-color: #FFFF00">Jenkins</span> Azure Service Fabric Plugin 1.6 and earlier allows attackers to connect to a Service Fabric URL using attacker-specified credentials IDs obtained through another method.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24402">https://www.tenable.com/cve/CVE-2025-24402</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24401" target="_blank">CVE-2025-24401</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p><span style="background-color: #FFFF00">Jenkins</span> Folder-based Authorization Strategy Plugin 217.vd5b_18537403e and earlier does not verify that permissions configured to be granted are enabled, potentially allowing users formerly granted (typically optional permissions, like Overall/Manage) to access functionality they're no longer entitled to.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24401">https://www.tenable.com/cve/CVE-2025-24401</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24400" target="_blank">CVE-2025-24400</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p><span style="background-color: #FFFF00">Jenkins</span> Eiffel Broadcaster Plugin 2.8.0 through 2.10.2 (both inclusive) uses the credential ID as the cache key during signing operations, allowing attackers able to create a credential with the same ID as a legitimate one in a different credentials store to sign an event published to RabbitMQ with the legitimate credentials.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24400">https://www.tenable.com/cve/CVE-2025-24400</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24399" target="_blank">CVE-2025-24399</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p><span style="background-color: #FFFF00">Jenkins</span> OpenId Connect Authentication Plugin 4.452.v2849b_d3945fa_ and earlier, except 4.438.440.v3f5f201de5dc, treats usernames as case-insensitive, allowing attackers on <span style="background-color: #FFFF00">Jenkins</span> instances configured with a case-sensitive OpenID Connect provider to log in as any user by providing a username that differs only in letter case, potentially gaining administrator access to <span style="background-color: #FFFF00">Jenkins</span>.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24399">https://www.tenable.com/cve/CVE-2025-24399</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24398" target="_blank">CVE-2025-24398</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p><span style="background-color: #FFFF00">Jenkins</span> Bitbucket Server Integration Plugin 2.1.0 through 4.1.3 (both inclusive) allows attackers to craft URLs that would bypass the CSRF protection of any target URL in <span style="background-color: #FFFF00">Jenkins</span>.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24398">https://www.tenable.com/cve/CVE-2025-24398</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24397" target="_blank">CVE-2025-24397</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>An incorrect permission check in <span style="background-color: #FFFF00">Jenkins</span> <span style="background-color: #FFFF00">GitLab</span> Plugin 1.9.6 and earlier allows attackers with global Item/Configure permission (while lacking Item/Configure permission on any particular job) to enumerate credential IDs of <span style="background-color: #FFFF00">GitLab</span> API token and Secret text credentials stored in <span style="background-color: #FFFF00">Jenkins</span>.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24397">https://www.tenable.com/cve/CVE-2025-24397</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23028" target="_blank">CVE-2025-23028</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Cilium is a networking, observability, and security solution with an eBPF-based dataplane. A denial of service vulnerability affects versions 1.14.0 through 1.14.7, 1.15.0 through 1.15.11, and 1.16.0 through 1.16.4. In a <span style="background-color: #FFFF00">Kubernetes</span> cluster where Cilium is configured to proxy DNS traffic, an attacker can crash Cilium agents by sending a crafted DNS response to workloads from outside the cluster. For traffic that is allowed but without using DNS-based policy, the dataplane will continue to pass traffic as configured at the time of the DoS. For workloads that have DNS-based policy configured, existing connections may continue to operate, and new connections made without relying on DNS resolution may continue to be established, but new connections which rely on DNS resolution may be disrupted. Any configuration changes that affect the impacted agent may not be applied until the agent is able to restart. This issue is fixed in Cilium v1.14.18, v1.15.12, and v1.16.5. No known workarounds are available.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23028">https://www.tenable.com/cve/CVE-2025-23028</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-20165" target="_blank">CVE-2025-20165</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A vulnerability in the SIP processing subsystem of Cisco BroadWorks could allow an unauthenticated, remote attacker to halt the processing of incoming SIP requests, resulting in a denial of service (DoS) condition. This vulnerability is due to improper memory handling for certain SIP requests. An attacker could exploit this vulnerability by sending a high number of SIP requests to an affected system. A successful exploit could allow the attacker to exhaust the memory that was allocated to the Cisco BroadWorks Network Servers that handle SIP traffic. If no memory is available, the Network Servers can no longer process incoming requests, resulting in a DoS condition that requires manual intervention to recover.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-20165">https://www.tenable.com/cve/CVE-2025-20165</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-20156" target="_blank">CVE-2025-20156</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>A vulnerability in the REST API of Cisco Meeting Management could allow a remote, authenticated attacker with low privileges to elevate privileges to administrator on an affected device. This vulnerability exists because proper authorization is not enforced upon&nbsp;REST API users. An attacker could exploit this vulnerability by sending API requests to a specific endpoint. A successful exploit could allow the attacker to gain administrator-level control over edge nodes that are managed by Cisco Meeting Management.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-20156">https://www.tenable.com/cve/CVE-2025-20156</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-20128" target="_blank">CVE-2025-20128</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A vulnerability in the Object Linking and Embedding 2 (OLE2) decryption routine of ClamAV could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to an integer underflow in a bounds check that allows for a heap buffer overflow read. An attacker could exploit this vulnerability by submitting a crafted file containing OLE2 content to be scanned by ClamAV on an affected device. A successful exploit could allow the attacker to terminate the ClamAV scanning process, resulting in a DoS condition on the affected software. For a description of this vulnerability, see the . Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-20128">https://www.tenable.com/cve/CVE-2025-20128</a></p></td></tr><tr><td>Wed, 22 Jan 2025 17:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-51457" target="_blank">CVE-2024-51457</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>IBM Robotic Process Automation for Cloud Pak 21.0.0 through 21.0.7.19 and 23.0.0 through 23.0.19 is vulnerable to cross-site scripting. This vulnerability allows an authenticated user to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-51457">https://www.tenable.com/cve/CVE-2024-51457</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:32 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23992" target="_blank">CVE-2025-23992</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Leetoo Toocheke Companion allows Stored XSS. This issue affects Toocheke Companion: from n/a through 1.166.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23992">https://www.tenable.com/cve/CVE-2025-23992</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:31 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23914" target="_blank">CVE-2025-23914</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Deserialization of Untrusted Data vulnerability in NotFound Muzaara Google Ads Report allows Object Injection. This issue affects Muzaara Google Ads Report: from n/a through 3.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23914">https://www.tenable.com/cve/CVE-2025-23914</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:31 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23809" target="_blank">CVE-2025-23809</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Blue Wrench Video Widget allows Reflected XSS. This issue affects Blue Wrench Video Widget: from n/a through 2.1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23809">https://www.tenable.com/cve/CVE-2025-23809</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:29 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0638" target="_blank">CVE-2025-0638</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The initial code parsing the manifest did not check the content of the file names yet later code assumed that it was checked and panicked when encountering illegal characters, resulting in a crash of Routinator.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0638">https://www.tenable.com/cve/CVE-2025-0638</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:29 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-55488" target="_blank">CVE-2024-55488</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A stored cross-site scripting (XSS) vulnerability in Umbraco CMS v14.3.1 allows attackers to execute arbitrary web scripts or HTML via a crafted payload.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-55488">https://www.tenable.com/cve/CVE-2024-55488</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:29 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-42013" target="_blank">CVE-2024-42013</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>In GRAU DATA Blocky before 3.1, Blocky-Gui has a Client-Side Enforcement of Server-Side Security vulnerability. An attacker with <span style="background-color: #FFFF00">Windows</span> administrative or debugging privileges can patch a binary in memory or on disk to bypass the password login requirement and gain full access to all functions of the program.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-42013">https://www.tenable.com/cve/CVE-2024-42013</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:29 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-42012" target="_blank">CVE-2024-42012</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>GRAU DATA Blocky before 3.1 stores passwords encrypted rather than hashed. At the login screen, the user's password is compared to the user's decrypted cleartext password. An attacker with <span style="background-color: #FFFF00">Windows</span> admin or debugging rights can therefore steal the user's Blocky password and from there impersonate that local user.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-42012">https://www.tenable.com/cve/CVE-2024-42012</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:29 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-31903" target="_blank">CVE-2024-31903</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>IBM Sterling B2B Integrator Standard Edition 6.0.0.0 through 6.1.2.5 and 6.2.0.0 through 6.2.0.2 allow an attacker on the local network to execute arbitrary code on the system, caused by the deserialization of untrusted data.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-31903">https://www.tenable.com/cve/CVE-2024-31903</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:28 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24429" target="_blank">CVE-2024-24429</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the nas_eps_send_emm_to_esm function of Open5GS </p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:28 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-10929" target="_blank">CVE-2024-10929</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>In certain circumstances, an issue in Arm Cortex-A72 (revisions before r1p0), Cortex-A73 and Cortex-A75 may allow an adversary to gain a weak form of control over the victim's branch history.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-10929">https://www.tenable.com/cve/CVE-2024-10929</a></p></td></tr><tr><td>Wed, 22 Jan 2025 16:15:28 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37777" target="_blank">CVE-2023-37777</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Synnefo Internet Management Software 2023 was discovered to contain a SQL injection vulnerability.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2023-37777">https://www.tenable.com/cve/CVE-2023-37777</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:27 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-24027" target="_blank">CVE-2025-24027</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>ps_contactinfo, a PrestaShop module for displaying store contact information, has a cross-site scripting (XSS) vulnerability in versions up to and including 3.3.2. This can not be exploited in a fresh install of PrestaShop, only shops made vulnerable by third party modules are concerned. For example, if the shop has a third party module vulnerable to SQL injections, then ps_contactinfo might execute a stored cross-site scripting in formatting objects. Commit d60f9a5634b4fc2d3a8831fb08fe2e1f23cbfa39 keeps formatted addresses from displaying a XSS stored in the database, and the fix is expected to be available in version 3.3.3. No workarounds are available aside from applying the fix and keeping all modules maintained and update.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-24027">https://www.tenable.com/cve/CVE-2025-24027</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23966" target="_blank">CVE-2025-23966</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in AlaFalaki a Gateway for Pasargad Bank on WooCommerce allows Reflected XSS. This issue affects a Gateway for Pasargad Bank on WooCommerce: from n/a through 2.5.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23966">https://www.tenable.com/cve/CVE-2025-23966</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23959" target="_blank">CVE-2025-23959</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Linus Lundahl Good Old Gallery allows Reflected XSS. This issue affects Good Old Gallery: from n/a through 2.1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23959">https://www.tenable.com/cve/CVE-2025-23959</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23953" target="_blank">CVE-2025-23953</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Unrestricted Upload of File with Dangerous Type vulnerability in Innovative Solutions user files allows Upload a Web Shell to a Web Server. This issue affects user files: from n/a through 2.4.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23953">https://www.tenable.com/cve/CVE-2025-23953</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23949" target="_blank">CVE-2025-23949</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Mihajlovic Nenad Improved Sale Badges – Free Version allows PHP Local File Inclusion. This issue affects Improved Sale Badges – Free Version: from n/a through 1.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23949">https://www.tenable.com/cve/CVE-2025-23949</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23948" target="_blank">CVE-2025-23948</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in WebArea Background animation blocks allows PHP Local File Inclusion. This issue affects Background animation blocks: from n/a through 2.1.5.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23948">https://www.tenable.com/cve/CVE-2025-23948</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23944" target="_blank">CVE-2025-23944</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Deserialization of Untrusted Data vulnerability in WOOEXIM.COM WOOEXIM allows Object Injection. This issue affects WOOEXIM: from n/a through 5.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23944">https://www.tenable.com/cve/CVE-2025-23944</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:26 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23942" target="_blank">CVE-2025-23942</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Unrestricted Upload of File with Dangerous Type vulnerability in NgocCode WP Load Gallery allows Upload a Web Shell to a Web Server. This issue affects WP Load Gallery: from n/a through 2.1.6.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23942">https://www.tenable.com/cve/CVE-2025-23942</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23938" target="_blank">CVE-2025-23938</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in NotFound Image Gallery Box by CRUDLab allows PHP Local File Inclusion. This issue affects Image Gallery Box by CRUDLab: from n/a through 1.0.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23938">https://www.tenable.com/cve/CVE-2025-23938</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23932" target="_blank">CVE-2025-23932</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Deserialization of Untrusted Data vulnerability in NotFound Quick Count allows Object Injection. This issue affects Quick Count: from n/a through 3.00.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23932">https://www.tenable.com/cve/CVE-2025-23932</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23931" target="_blank">CVE-2025-23931</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in NotFound WordPress Local SEO allows Blind SQL Injection. This issue affects WordPress Local SEO: from n/a through 2.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23931">https://www.tenable.com/cve/CVE-2025-23931</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23921" target="_blank">CVE-2025-23921</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Unrestricted Upload of File with Dangerous Type vulnerability in NotFound Multi Uploader for Gravity Forms allows Upload a Web Shell to a Web Server. This issue affects Multi Uploader for Gravity Forms: from n/a through 1.1.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23921">https://www.tenable.com/cve/CVE-2025-23921</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23918" target="_blank">CVE-2025-23918</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Unrestricted Upload of File with Dangerous Type vulnerability in NotFound Smallerik File Browser allows Upload a Web Shell to a Web Server. This issue affects Smallerik File Browser: from n/a through 1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23918">https://www.tenable.com/cve/CVE-2025-23918</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23910" target="_blank">CVE-2025-23910</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in NotFound Menus Plus+ allows SQL Injection. This issue affects Menus Plus+: from n/a through 1.9.6.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23910">https://www.tenable.com/cve/CVE-2025-23910</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:25 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23882" target="_blank">CVE-2025-23882</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WP Download Codes allows Reflected XSS. This issue affects WP Download Codes: from n/a through 2.5.4.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23882">https://www.tenable.com/cve/CVE-2025-23882</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23874" target="_blank">CVE-2025-23874</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WP Block Pack allows Reflected XSS. This issue affects WP Block Pack: from n/a through 1.1.6.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23874">https://www.tenable.com/cve/CVE-2025-23874</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23867" target="_blank">CVE-2025-23867</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WordPress File Search allows Reflected XSS. This issue affects WordPress File Search: from n/a through 1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23867">https://www.tenable.com/cve/CVE-2025-23867</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23866" target="_blank">CVE-2025-23866</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound EU DSGVO Helper allows Reflected XSS. This issue affects EU DSGVO Helper: from n/a through 1.0.6.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23866">https://www.tenable.com/cve/CVE-2025-23866</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23846" target="_blank">CVE-2025-23846</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Kolja Nolte Flexible Blogtitle allows Reflected XSS. This issue affects Flexible Blogtitle: from n/a through 0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23846">https://www.tenable.com/cve/CVE-2025-23846</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23812" target="_blank">CVE-2025-23812</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Contact Form 7 Round Robin Lead Distribution allows Reflected XSS. This issue affects Contact Form 7 Round Robin Lead Distribution: from n/a through 1.2.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23812">https://www.tenable.com/cve/CVE-2025-23812</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23811" target="_blank">CVE-2025-23811</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WP2APP allows Reflected XSS. This issue affects WP2APP: from n/a through 2.6.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23811">https://www.tenable.com/cve/CVE-2025-23811</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23806" target="_blank">CVE-2025-23806</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Cross-Site Request Forgery (CSRF) vulnerability in ThemeFarmer Ultimate Subscribe allows Reflected XSS. This issue affects Ultimate Subscribe: from n/a through 1.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23806">https://www.tenable.com/cve/CVE-2025-23806</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:24 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23803" target="_blank">CVE-2025-23803</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Cross-Site Request Forgery (CSRF) vulnerability in PQINA Snippy allows Reflected XSS. This issue affects Snippy: from n/a through 1.4.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23803">https://www.tenable.com/cve/CVE-2025-23803</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23798" target="_blank">CVE-2025-23798</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Eliott Robson Mass Messaging in BuddyPress allows Reflected XSS. This issue affects Mass Messaging in BuddyPress: from n/a through 2.2.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23798">https://www.tenable.com/cve/CVE-2025-23798</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23784" target="_blank">CVE-2025-23784</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in NotFound Contact Form 7 Round Robin Lead Distribution allows SQL Injection. This issue affects Contact Form 7 Round Robin Lead Distribution: from n/a through 1.2.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23784">https://www.tenable.com/cve/CVE-2025-23784</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23781" target="_blank">CVE-2025-23781</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Insertion of Sensitive Information Into Sent Data vulnerability in NotFound WM Options Import Export allows Retrieve Embedded Sensitive Data. This issue affects WM Options Import Export: from n/a through 1.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23781">https://www.tenable.com/cve/CVE-2025-23781</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23774" target="_blank">CVE-2025-23774</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Insertion of Sensitive Information Into Sent Data vulnerability in NotFound WPDB to Sql allows Retrieve Embedded Sensitive Data. This issue affects WPDB to Sql: from n/a through 1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23774">https://www.tenable.com/cve/CVE-2025-23774</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23770" target="_blank">CVE-2025-23770</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Fast Tube allows Reflected XSS. This issue affects Fast Tube: from n/a through 2.3.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23770">https://www.tenable.com/cve/CVE-2025-23770</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23769" target="_blank">CVE-2025-23769</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Content Mirror allows Reflected XSS. This issue affects Content Mirror: from n/a through 1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23769">https://www.tenable.com/cve/CVE-2025-23769</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:23 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23768" target="_blank">CVE-2025-23768</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound InFunding allows Reflected XSS. This issue affects InFunding: from n/a through 1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23768">https://www.tenable.com/cve/CVE-2025-23768</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23758" target="_blank">CVE-2025-23758</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Pootle button allows Reflected XSS. This issue affects Pootle button: from n/a through 1.2.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23758">https://www.tenable.com/cve/CVE-2025-23758</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23746" target="_blank">CVE-2025-23746</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound CMC MIGRATE allows Reflected XSS. This issue affects CMC MIGRATE: from n/a through 0.0.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23746">https://www.tenable.com/cve/CVE-2025-23746</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23732" target="_blank">CVE-2025-23732</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Easy Filtering allows Reflected XSS. This issue affects Easy Filtering: from n/a through 2.5.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23732">https://www.tenable.com/cve/CVE-2025-23732</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23709" target="_blank">CVE-2025-23709</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Kiro G. Formatted post allows Reflected XSS. This issue affects Formatted post: from n/a through 1.01.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23709">https://www.tenable.com/cve/CVE-2025-23709</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23706" target="_blank">CVE-2025-23706</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Jet Skinner for BuddyPress allows Reflected XSS. This issue affects Jet Skinner for BuddyPress: from n/a through 1.2.5.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23706">https://www.tenable.com/cve/CVE-2025-23706</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23701" target="_blank">CVE-2025-23701</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Matthew Blackford, LimeSquare Pty Ltd Lime Developer Login allows Reflected XSS. This issue affects Lime Developer Login: from n/a through 1.4.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23701">https://www.tenable.com/cve/CVE-2025-23701</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23700" target="_blank">CVE-2025-23700</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Yonatan Reinberg yCyclista allows Reflected XSS. This issue affects yCyclista: from n/a through 1.2.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23700">https://www.tenable.com/cve/CVE-2025-23700</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:22 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23697" target="_blank">CVE-2025-23697</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WebDeal s.r.o. Podčlánková inzerce allows Reflected XSS. This issue affects Podčlánková inzerce: from n/a through 2.4.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23697">https://www.tenable.com/cve/CVE-2025-23697</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23696" target="_blank">CVE-2025-23696</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Staging CDN allows Reflected XSS. This issue affects Staging CDN: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23696">https://www.tenable.com/cve/CVE-2025-23696</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23695" target="_blank">CVE-2025-23695</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound CtyGrid Hyp3rL0cal Search allows Reflected XSS. This issue affects CtyGrid Hyp3rL0cal Search: from n/a through 0.1.1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23695">https://www.tenable.com/cve/CVE-2025-23695</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23686" target="_blank">CVE-2025-23686</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Callum Richards Admin Menu Organizer allows Reflected XSS. This issue affects Admin Menu Organizer: from n/a through 1.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23686">https://www.tenable.com/cve/CVE-2025-23686</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23684" target="_blank">CVE-2025-23684</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Missing Authorization vulnerability in Eugen Bobrowski Debug Tool allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Debug Tool: from n/a through 2.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23684">https://www.tenable.com/cve/CVE-2025-23684</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23683" target="_blank">CVE-2025-23683</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound MACME allows Reflected XSS. This issue affects MACME: from n/a through 1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23683">https://www.tenable.com/cve/CVE-2025-23683</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:21 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23682" target="_blank">CVE-2025-23682</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Preloader Quotes allows Reflected XSS. This issue affects Preloader Quotes: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23682">https://www.tenable.com/cve/CVE-2025-23682</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23681" target="_blank">CVE-2025-23681</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in jannatqualitybacklinks.com REDIRECTION PLUS allows Reflected XSS. This issue affects REDIRECTION PLUS: from n/a through 2.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23681">https://www.tenable.com/cve/CVE-2025-23681</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23679" target="_blank">CVE-2025-23679</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Moshiur Rahman Mehedi FP RSS Category Excluder allows Reflected XSS. This issue affects FP RSS Category Excluder: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23679">https://www.tenable.com/cve/CVE-2025-23679</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23678" target="_blank">CVE-2025-23678</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound LocalGrid allows Reflected XSS. This issue affects LocalGrid: from n/a through 1.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23678">https://www.tenable.com/cve/CVE-2025-23678</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23676" target="_blank">CVE-2025-23676</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound LH Email allows Reflected XSS. This issue affects LH Email: from n/a through 1.12.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23676">https://www.tenable.com/cve/CVE-2025-23676</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23674" target="_blank">CVE-2025-23674</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Bit.ly linker allows Reflected XSS. This issue affects Bit.ly linker: from n/a through 1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23674">https://www.tenable.com/cve/CVE-2025-23674</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23672" target="_blank">CVE-2025-23672</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Instant Appointment allows Reflected XSS. This issue affects Instant Appointment: from n/a through 1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23672">https://www.tenable.com/cve/CVE-2025-23672</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23643" target="_blank">CVE-2025-23643</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound ReadMe Creator allows Reflected XSS. This issue affects ReadMe Creator: from n/a through 1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23643">https://www.tenable.com/cve/CVE-2025-23643</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23631" target="_blank">CVE-2025-23631</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Content Planner allows Reflected XSS. This issue affects Content Planner: from n/a through 1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23631">https://www.tenable.com/cve/CVE-2025-23631</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23630" target="_blank">CVE-2025-23630</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Cyber Slider allows Reflected XSS. This issue affects Cyber Slider: from n/a through 1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23630">https://www.tenable.com/cve/CVE-2025-23630</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23625" target="_blank">CVE-2025-23625</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in AWcode, PDSonline Unique UX allows Reflected XSS. This issue affects Unique UX: from n/a through 0.9.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23625">https://www.tenable.com/cve/CVE-2025-23625</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23611" target="_blank">CVE-2025-23611</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WH Cache &amp; Security allows Reflected XSS. This issue affects WH Cache &amp; Security: from n/a through 1.1.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23611">https://www.tenable.com/cve/CVE-2025-23611</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23610" target="_blank">CVE-2025-23610</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Ultimate Events allows Reflected XSS. This issue affects Ultimate Events: from n/a through 1.3.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23610">https://www.tenable.com/cve/CVE-2025-23610</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23609" target="_blank">CVE-2025-23609</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Helmuth Lammer Tagesteller allows Reflected XSS. This issue affects Tagesteller: from n/a through v.1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23609">https://www.tenable.com/cve/CVE-2025-23609</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23607" target="_blank">CVE-2025-23607</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Camoo Sarl CAMOO SMS allows Reflected XSS. This issue affects CAMOO SMS: from n/a through 3.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23607">https://www.tenable.com/cve/CVE-2025-23607</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23606" target="_blank">CVE-2025-23606</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Calendi allows Reflected XSS. This issue affects Calendi: from n/a through 1.1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23606">https://www.tenable.com/cve/CVE-2025-23606</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23605" target="_blank">CVE-2025-23605</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in LamPD Call To Action Popup allows Reflected XSS. This issue affects Call To Action Popup: from n/a through 1.0.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23605">https://www.tenable.com/cve/CVE-2025-23605</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23604" target="_blank">CVE-2025-23604</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Rezdy Reloaded allows Stored XSS. This issue affects Rezdy Reloaded: from n/a through 1.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23604">https://www.tenable.com/cve/CVE-2025-23604</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23603" target="_blank">CVE-2025-23603</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Group category creator allows Reflected XSS. This issue affects Group category creator: from n/a through 1.3.0.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23603">https://www.tenable.com/cve/CVE-2025-23603</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23602" target="_blank">CVE-2025-23602</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound EELV Newsletter allows Reflected XSS. This issue affects EELV Newsletter: from n/a through 4.8.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23602">https://www.tenable.com/cve/CVE-2025-23602</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23601" target="_blank">CVE-2025-23601</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Tab My Content allows Reflected XSS. This issue affects Tab My Content: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23601">https://www.tenable.com/cve/CVE-2025-23601</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23597" target="_blank">CVE-2025-23597</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Riosis Private Limited Rio Photo Gallery allows Reflected XSS. This issue affects Rio Photo Gallery: from n/a through 0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23597">https://www.tenable.com/cve/CVE-2025-23597</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23592" target="_blank">CVE-2025-23592</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound dForms allows Reflected XSS. This issue affects dForms: from n/a through 1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23592">https://www.tenable.com/cve/CVE-2025-23592</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23589" target="_blank">CVE-2025-23589</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound ContentOptin Lite allows Reflected XSS. This issue affects ContentOptin Lite: from n/a through 1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23589">https://www.tenable.com/cve/CVE-2025-23589</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23583" target="_blank">CVE-2025-23583</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Explara Explara Membership allows Reflected XSS. This issue affects Explara Membership: from n/a through 0.0.7.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23583">https://www.tenable.com/cve/CVE-2025-23583</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23578" target="_blank">CVE-2025-23578</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Custom CSS Addons allows Reflected XSS. This issue affects Custom CSS Addons: from n/a through 1.9.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23578">https://www.tenable.com/cve/CVE-2025-23578</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23562" target="_blank">CVE-2025-23562</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in NotFound XLSXviewer allows Path Traversal. This issue affects XLSXviewer: from n/a through 2.1.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23562">https://www.tenable.com/cve/CVE-2025-23562</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23548" target="_blank">CVE-2025-23548</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Bilal TAS Responsivity allows Reflected XSS. This issue affects Responsivity: from n/a through 0.0.6.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23548">https://www.tenable.com/cve/CVE-2025-23548</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23535" target="_blank">CVE-2025-23535</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in clickandsell REAL WordPress Sidebar allows Stored XSS. This issue affects REAL WordPress Sidebar: from n/a through 0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23535">https://www.tenable.com/cve/CVE-2025-23535</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23512" target="_blank">CVE-2025-23512</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Missing Authorization vulnerability in Team118GROUP Team 118GROUP Agent allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Team 118GROUP Agent: from n/a through 1.6.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23512">https://www.tenable.com/cve/CVE-2025-23512</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:17 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23509" target="_blank">CVE-2025-23509</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound HyperComments allows Reflected XSS. This issue affects HyperComments: from n/a through 0.9.6.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23509">https://www.tenable.com/cve/CVE-2025-23509</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23507" target="_blank">CVE-2025-23507</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Blrt Blrt WP Embed allows Reflected XSS. This issue affects Blrt WP Embed: from n/a through 1.6.9.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23507">https://www.tenable.com/cve/CVE-2025-23507</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23506" target="_blank">CVE-2025-23506</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WP IMAP Auth allows Reflected XSS. This issue affects WP IMAP Auth: from n/a through 4.0.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23506">https://www.tenable.com/cve/CVE-2025-23506</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23503" target="_blank">CVE-2025-23503</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Customizable Captcha and Contact Us allows Reflected XSS. This issue affects Customizable Captcha and Contact Us: from n/a through 1.0.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23503">https://www.tenable.com/cve/CVE-2025-23503</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23500" target="_blank">CVE-2025-23500</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Faaiq Ahmed, Technial Architect,faaiqsj@gmail.com Simple Custom post type custom field allows Reflected XSS. This issue affects Simple Custom post type custom field: from n/a through 1.0.3.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23500">https://www.tenable.com/cve/CVE-2025-23500</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23498" target="_blank">CVE-2025-23498</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Translation.Pro allows Reflected XSS. This issue affects Translation.Pro: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23498">https://www.tenable.com/cve/CVE-2025-23498</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23495" target="_blank">CVE-2025-23495</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound WooCommerce Order Search allows Reflected XSS. This issue affects WooCommerce Order Search: from n/a through 1.1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23495">https://www.tenable.com/cve/CVE-2025-23495</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23486" target="_blank">CVE-2025-23486</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Missing Authorization vulnerability in NotFound Database Sync allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects Database Sync: from n/a through 0.5.1.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23486">https://www.tenable.com/cve/CVE-2025-23486</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23475" target="_blank">CVE-2025-23475</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound History timeline allows Reflected XSS. This issue affects History timeline: from n/a through 0.7.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23475">https://www.tenable.com/cve/CVE-2025-23475</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23462" target="_blank">CVE-2025-23462</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound FWD Slider allows Reflected XSS. This issue affects FWD Slider: from n/a through 1.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23462">https://www.tenable.com/cve/CVE-2025-23462</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23449" target="_blank">CVE-2025-23449</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Simple shortcode buttons allows Reflected XSS. This issue affects Simple shortcode buttons: from n/a through 1.3.2.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23449">https://www.tenable.com/cve/CVE-2025-23449</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-22980" target="_blank">CVE-2025-22980</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>A SQL Injection vulnerability exists in Senayan Library Management System SLiMS 9 Bulian 9.6.1 via the tempLoanID parameter in the loan form on /admin/modules/circulation/loan.php.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-22980">https://www.tenable.com/cve/CVE-2025-22980</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-22772" target="_blank">CVE-2025-22772</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NotFound Mapbox for WP Advanced allows Reflected XSS. This issue affects Mapbox for WP Advanced: from n/a through 1.0.0.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-22772">https://www.tenable.com/cve/CVE-2025-22772</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0604" target="_blank">CVE-2025-0604</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A flaw was found in Keycloak. When an Active Directory user resets their password, the system updates it without performing an LDAP bind to validate the new credentials against AD. This vulnerability allows users whose AD accounts are expired or disabled to regain access in Keycloak, bypassing AD restrictions. The issue enables authentication bypass and could allow unauthorized access under certain conditions.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0604">https://www.tenable.com/cve/CVE-2025-0604</a></p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-34235" target="_blank">CVE-2024-34235</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24432" target="_blank">CVE-2024-24432</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the ogs_kdf_hash_mme function of Open5GS </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24430" target="_blank">CVE-2024-24430</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the mme_ue_find_by_imsi function of Open5GS </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37023" target="_blank">CVE-2023-37023</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37022" target="_blank">CVE-2023-37022</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37021" target="_blank">CVE-2023-37021</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME version </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37020" target="_blank">CVE-2023-37020</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37019" target="_blank">CVE-2023-37019</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37018" target="_blank">CVE-2023-37018</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37017" target="_blank">CVE-2023-37017</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37016" target="_blank">CVE-2023-37016</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:11 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37015" target="_blank">CVE-2023-37015</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37014" target="_blank">CVE-2023-37014</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37013" target="_blank">CVE-2023-37013</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37012" target="_blank">CVE-2023-37012</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37011" target="_blank">CVE-2023-37011</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37010" target="_blank">CVE-2023-37010</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37009" target="_blank">CVE-2023-37009</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37008" target="_blank">CVE-2023-37008</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37007" target="_blank">CVE-2023-37007</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:10 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37006" target="_blank">CVE-2023-37006</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37004" target="_blank">CVE-2023-37004</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37003" target="_blank">CVE-2023-37003</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37002" target="_blank">CVE-2023-37002</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Open5GS MME versions </p></td></tr><tr><td>Wed, 22 Jan 2025 15:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-36998" target="_blank">CVE-2023-36998</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>The NextEPC MME </p></td></tr><tr><td>Wed, 22 Jan 2025 13:15:20 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0395" target="_blank">CVE-2025-0395</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>When the assert() function in the GNU C Library versions 2.13 to 2.40 fails, it does not allocate enough space for the assertion failure message string and size information, which may lead to a buffer overflow if the message string size aligns to page size.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0395">https://www.tenable.com/cve/CVE-2025-0395</a></p></td></tr><tr><td>Wed, 22 Jan 2025 11:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13499" target="_blank">CVE-2024-13499</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The The GamiPress – Gamification plugin to reward points, achievements, badges &amp; ranks in WordPress plugin for WordPress is vulnerable to arbitrary shortcode execution via gamipress_do_shortcode() function in all versions up to, and including, 7.2.1. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13499">https://www.tenable.com/cve/CVE-2024-13499</a></p></td></tr><tr><td>Wed, 22 Jan 2025 11:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13496" target="_blank">CVE-2024-13496</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The GamiPress – Gamification plugin to reward points, achievements, badges &amp; ranks in WordPress plugin for WordPress is vulnerable to time-based SQL Injection via the ‘orderby’ parameter in all versions up to, and including, 7.2.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13496">https://www.tenable.com/cve/CVE-2024-13496</a></p></td></tr><tr><td>Wed, 22 Jan 2025 11:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13495" target="_blank">CVE-2024-13495</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The The GamiPress – Gamification plugin to reward points, achievements, badges &amp; ranks in WordPress plugin for WordPress is vulnerable to arbitrary shortcode execution via the gamipress_ajax_get_logs() function in all versions up to, and including, 7.2.1. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13495">https://www.tenable.com/cve/CVE-2024-13495</a></p></td></tr><tr><td>Wed, 22 Jan 2025 11:15:07 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13447" target="_blank">CVE-2024-13447</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The WP Hotel Booking plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the hotel_booking_load_order_user AJAX action in all versions up to, and including, 2.1.6. This makes it possible for authenticated attackers, with Subscriber-level access and above, to retrieve a list of registered user emails.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13447">https://www.tenable.com/cve/CVE-2024-13447</a></p></td></tr><tr><td>Wed, 22 Jan 2025 10:15:07 GMT</td><td><a href="verify.php?vuln_id=CVE-2022-23439" target="_blank">CVE-2022-23439</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A externally controlled reference to a resource in another sphere in Fortinet FortiManager before version 7.4.3, FortiMail before version 7.0.3, FortiAnalyzer before version 7.4.3, FortiVoice version 7.0.0, 7.0.1 and before 6.4.8, FortiProxy before version 7.0.4, FortiRecorder version 6.4.0 through 6.4.2 and before 6.0.10, FortiAuthenticator version 6.4.0 through 6.4.1 and before 6.3.3, FortiNDR version 7.2.0 before 7.1.0, FortiWLC before version 8.6.4, FortiPortal before version 6.0.9, <span style="background-color: #FFFF00">FortiOS</span> version 7.2.0 and before 7.0.5, FortiADC version 7.0.0 through 7.0.1 and before 6.2.3 , FortiDDoS before version 5.5.1, FortiDDoS-F before version 6.3.3, FortiTester before version 7.2.1, FortiSOAR before version 7.2.2 and FortiSwitch before version 6.3.3 allows attacker to poison web caches via crafted HTTP requests, where the `Host` header points to an arbitrary webserver</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2022-23439">https://www.tenable.com/cve/CVE-2022-23439</a></p></td></tr><tr><td>Wed, 22 Jan 2025 08:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0429" target="_blank">CVE-2025-0429</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The "AI Power: Complete AI Pack" plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 1.8.96 via deserialization of untrusted input from the $form['post_content'] variable through the wpaicg_export_ai_forms() function. This allows authenticated attackers, with administrative privileges, to inject a PHP Object. No POP chain is present in the vulnerable plugin. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0429">https://www.tenable.com/cve/CVE-2025-0429</a></p></td></tr><tr><td>Wed, 22 Jan 2025 08:15:09 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0428" target="_blank">CVE-2025-0428</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The "AI Power: Complete AI Pack" plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 1.8.96 via deserialization of untrusted input from the $form['post_content'] variable through the wpaicg_export_prompts function. This allows authenticated attackers, with administrative privileges, to inject a PHP Object. No POP chain is present in the vulnerable plugin. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0428">https://www.tenable.com/cve/CVE-2025-0428</a></p></td></tr><tr><td>Wed, 22 Jan 2025 08:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13361" target="_blank">CVE-2024-13361</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The AI Power: Complete AI Pack plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the wpaicg_save_image_media function in all versions up to, and including, 1.8.96. This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload image files and embed shortcode attributes in the image_alt value that will execute when sending a POST request to the attachment page.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13361">https://www.tenable.com/cve/CVE-2024-13361</a></p></td></tr><tr><td>Wed, 22 Jan 2025 08:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13360" target="_blank">CVE-2024-13360</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The AI Power: Complete AI Pack plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 1.8.96 via the wpaicg_troubleshoot_add_vector(). This makes it possible for authenticated attackers, with subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13360">https://www.tenable.com/cve/CVE-2024-13360</a></p></td></tr><tr><td>Wed, 22 Jan 2025 08:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13319" target="_blank">CVE-2024-13319</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The Themify Builder plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in all versions up to, and including, 7.6.5. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13319">https://www.tenable.com/cve/CVE-2024-13319</a></p></td></tr><tr><td>Wed, 22 Jan 2025 07:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13406" target="_blank">CVE-2024-13406</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The XML for Google Merchant Center plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'feed_id' parameter in all versions up to, and including, 3.0.11 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13406">https://www.tenable.com/cve/CVE-2024-13406</a></p></td></tr><tr><td>Wed, 22 Jan 2025 07:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-12857" target="_blank">CVE-2024-12857</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>The AdForest theme for WordPress is vulnerable to authentication bypass in all versions up to, and including, 5.1.8. This is due to the plugin not properly verifying a user's identity prior to logging them in as that user. This makes it possible for unauthenticated attackers to authenticate as any user as long as they have configured OTP login by phone number.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-12857">https://www.tenable.com/cve/CVE-2024-12857</a></p></td></tr><tr><td>Wed, 22 Jan 2025 07:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-12117" target="_blank">CVE-2024-12117</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The Stackable – Page Builder Gutenberg Blocks plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'title' parameter of the Button block in all versions up to, and including, 3.13.11 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-12117">https://www.tenable.com/cve/CVE-2024-12117</a></p></td></tr><tr><td>Wed, 22 Jan 2025 06:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23237" target="_blank">CVE-2025-23237</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Improper neutralization of special elements used in an OS command ('OS Command Injection') issue exists in UD-LT2 firmware Ver.1.00.008_SE and earlier. If a user logs in to CLI of the affected product, an arbitrary OS command may be executed.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23237">https://www.tenable.com/cve/CVE-2025-23237</a></p></td></tr><tr><td>Wed, 22 Jan 2025 06:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-22450" target="_blank">CVE-2025-22450</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Inclusion of undocumented features issue exists in UD-LT2 firmware Ver.1.00.008_SE and earlier. A remote attacker may disable the LAN-side firewall function of the affected products, and open specific ports.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-22450">https://www.tenable.com/cve/CVE-2025-22450</a></p></td></tr><tr><td>Wed, 22 Jan 2025 06:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-20617" target="_blank">CVE-2025-20617</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>Improper neutralization of special elements used in an OS command ('OS Command Injection') issue exists in UD-LT2 firmware Ver.1.00.008_SE and earlier. If this vulnerability is exploited, an arbitrary OS command may be executed by an attacker who can access the affected product with an administrative account.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-20617">https://www.tenable.com/cve/CVE-2025-20617</a></p></td></tr><tr><td>Wed, 22 Jan 2025 06:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-12879" target="_blank">CVE-2024-12879</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The WPBot Pro Wordpress Chatbot plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'qc_wp_latest_update_check_pro' function in all versions up to, and including, 13.5.5. This makes it possible for authenticated attackers, with Subscriber-level access and above, to create Simple Text Responses to chat queries.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-12879">https://www.tenable.com/cve/CVE-2024-12879</a></p></td></tr><tr><td>Wed, 22 Jan 2025 05:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-11218" target="_blank">CVE-2024-11218</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A vulnerability was found in `podman build` and `buildah.` This issue occurs in a container breakout by using --jobs=2 and a race condition when building a malicious Containerfile. SELinux might mitigate it, but even with SELinux on, it still allows the enumeration of files and directories on the host.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-11218">https://www.tenable.com/cve/CVE-2024-11218</a></p></td></tr><tr><td>Wed, 22 Jan 2025 04:15:07 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13590" target="_blank">CVE-2024-13590</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The Ketchup Shortcodes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'spacer' shortcode in all versions up to, and including, 0.1.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13590">https://www.tenable.com/cve/CVE-2024-13590</a></p></td></tr><tr><td>Wed, 22 Jan 2025 04:15:06 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13584" target="_blank">CVE-2024-13584</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The Picture Gallery – Frontend Image Uploads, AJAX Photo List plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'videowhisper_pictures' shortcode in all versions up to, and including, 1.5.19 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13584">https://www.tenable.com/cve/CVE-2024-13584</a></p></td></tr><tr><td>Wed, 22 Jan 2025 03:15:07 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13426" target="_blank">CVE-2024-13426</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The WP-Polls plugin for WordPress is vulnerable to SQL Injection via COOKIE in all versions up to, and including, 2.77.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries. Those queries are stored and results are not displayed to the attacker, which means they cannot be exploited to obtain any additional information about the database. However, a properly configured payload allows for the injection of malicious JavaScript resulting in Stored Cross-Site Scripting.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13426">https://www.tenable.com/cve/CVE-2024-13426</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:34 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23090" target="_blank">CVE-2025-23090</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage. This vulnerability affects Permission Model users (--permission) on <span style="background-color: #FFFF00">Node.js</span> v20, v22, and v23.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23090">https://www.tenable.com/cve/CVE-2025-23090</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:34 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23089" target="_blank">CVE-2025-23089</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>This CVE has been issued to inform users that they are using End-of-Life (EOL) versions of <span style="background-color: #FFFF00">Node.js</span>. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components). Users are advised to upgrade to actively supported versions of <span style="background-color: #FFFF00">Node.js</span> to ensure continued security updates and support.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23089">https://www.tenable.com/cve/CVE-2025-23089</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:34 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23088" target="_blank">CVE-2025-23088</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>This CVE has been issued to inform users that they are using End-of-Life (EOL) versions of <span style="background-color: #FFFF00">Node.js</span>. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components). Users are advised to upgrade to actively supported versions of <span style="background-color: #FFFF00">Node.js</span> to ensure continued security updates and support.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23088">https://www.tenable.com/cve/CVE-2025-23088</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:34 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23087" target="_blank">CVE-2025-23087</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>This CVE has been issued to inform users that they are using End-of-Life (EOL) versions of <span style="background-color: #FFFF00">Node.js</span>. These versions are no longer supported and do not receive updates, including security patches. The continued use of EOL versions may expose systems to potential security risks due to unaddressed software vulnerabilities or dependencies (CWE-1104: Use of Unmaintained Third-Party Components). Users are advised to upgrade to actively supported versions of <span style="background-color: #FFFF00">Node.js</span> to ensure continued security updates and support.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23087">https://www.tenable.com/cve/CVE-2025-23087</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:33 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-23083" target="_blank">CVE-2025-23083</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage. This vulnerability affects Permission Model users (--permission) on <span style="background-color: #FFFF00">Node.js</span> v20, v22, and v23.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-23083">https://www.tenable.com/cve/CVE-2025-23083</a></p></td></tr><tr><td>Wed, 22 Jan 2025 02:15:31 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0625" target="_blank">CVE-2025-0625</a></td><td><p style="color: Blue">Low Severity</p>
+            
+                  Description
+                  <p>A vulnerability, which was classified as problematic, was found in CampCodes School Management Software 1.0. This affects an unknown part of the component Attachment Handler. The manipulation leads to improper control of resource identifiers. It is possible to initiate the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. The exploit has been disclosed to the public and may be used.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0625">https://www.tenable.com/cve/CVE-2025-0625</a></p></td></tr><tr><td>Wed, 22 Jan 2025 00:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13091" target="_blank">CVE-2024-13091</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>The WPBot Pro Wordpress Chatbot plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'qcld_wpcfb_file_upload' function in all versions up to, and including, 13.5.4. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit requires thee ChatBot Conversational Forms plugin and the Conversational Form Builder Pro addon plugin.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13091">https://www.tenable.com/cve/CVE-2024-13091</a></p></td></tr><tr><td>Wed, 22 Jan 2025 00:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2023-37039" target="_blank">CVE-2023-37039</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A Null pointer dereference vulnerability in the Mobile Management Entity (MME) in Magma </p></td></tr><tr><td>Wed, 22 Jan 2025 00:00:00 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0142" target="_blank">CVE-2025-0142</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>Medium <span style="background-color: #FFFF00">Zoom</span> Plugin 1.3 and earlier stores <span style="background-color: #FFFF00">Zoom</span> integration tokens unencrypted in job config.xml files on the <span style="background-color: #FFFF00">Jenkins</span> controller as part of its configuration. These tokens can be viewed by users with Item/Extended Read permission or access to the <span style="background-color: #FFFF00">Jenkins</span> controller file system. <span style="background-color: #FFFF00">Zoom</span> Plugin 1.4 stores <span style="background-color: #FFFF00">Zoom</span> integration tokens encrypted once job configurations are saved again.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0142">https://www.tenable.com/cve/CVE-2025-0142</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49749" target="_blank">CVE-2024-49749</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In DGifSlurp of dgif_lib.c, there is a possible out of bounds write due to an integer overflow. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49749">https://www.tenable.com/cve/CVE-2024-49749</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49748" target="_blank">CVE-2024-49748</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>In gatts_process_primary_service_req of gatt_sr.cc, there is a possible out of bounds write due to a heap buffer overflow. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49748">https://www.tenable.com/cve/CVE-2024-49748</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:15 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49747" target="_blank">CVE-2024-49747</a></td><td><p style="color: Maroon">Critical Severity</p>
+            
+                  Description
+                  <p>In gatts_process_read_by_type_req of gatt_sr.cc, there is a possible out of bounds write due to a logic error in the code. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49747">https://www.tenable.com/cve/CVE-2024-49747</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49745" target="_blank">CVE-2024-49745</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In growData of Parcel.cpp, there is a possible out of bounds write due to an incorrect bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49745">https://www.tenable.com/cve/CVE-2024-49745</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49744" target="_blank">CVE-2024-49744</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In checkKeyIntentParceledCorrectly of AccountManagerService.java, there is a possible way to bypass parcel mismatch mitigation due to unsafe deserialization. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49744">https://www.tenable.com/cve/CVE-2024-49744</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49742" target="_blank">CVE-2024-49742</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In onCreate of NotificationAccessConfirmationActivity.java , there is a possible way to hide an app with notification access in Settings due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49742">https://www.tenable.com/cve/CVE-2024-49742</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49738" target="_blank">CVE-2024-49738</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In writeInplace of Parcel.cpp, there is a possible out of bounds write. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49738">https://www.tenable.com/cve/CVE-2024-49738</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49737" target="_blank">CVE-2024-49737</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In applyTaskFragmentOperation of WindowOrganizerController.java, there is a possible way to launch arbitrary activities as the system UID due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49737">https://www.tenable.com/cve/CVE-2024-49737</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49736" target="_blank">CVE-2024-49736</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In onClick of MainClear.java, there is a possible way to trigger factory reset without explicit user consent due to a logic error in the code. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49736">https://www.tenable.com/cve/CVE-2024-49736</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49735" target="_blank">CVE-2024-49735</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple locations, there is a possible failure to persist permissions settings due to resource exhaustion. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49735">https://www.tenable.com/cve/CVE-2024-49735</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49734" target="_blank">CVE-2024-49734</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple functions of ConnectivityService.java, there is a possible way for a Wi-Fi AP to determine what site a device has connected to through a VPN due to side channel information disclosure. This could lead to remote information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49734">https://www.tenable.com/cve/CVE-2024-49734</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49733" target="_blank">CVE-2024-49733</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>In reload of ServiceListing.java , there is a possible way to allow a malicious app to hide an NLS from Settings due to a logic error in the code. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49733">https://www.tenable.com/cve/CVE-2024-49733</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49732" target="_blank">CVE-2024-49732</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple functions of CompanionDeviceManagerService.java, there is a possible way to grant permissions without user consent due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49732">https://www.tenable.com/cve/CVE-2024-49732</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:14 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-49724" target="_blank">CVE-2024-49724</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple functions of AccountManagerService.java, there is a possible way to bypass permissions and launch protected activities due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-49724">https://www.tenable.com/cve/CVE-2024-49724</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43771" target="_blank">CVE-2024-43771</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In gatts_process_read_req of gatt_sr.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43771">https://www.tenable.com/cve/CVE-2024-43771</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43770" target="_blank">CVE-2024-43770</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In gatts_process_find_info of gatt_sr.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43770">https://www.tenable.com/cve/CVE-2024-43770</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43765" target="_blank">CVE-2024-43765</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple locations, there is a possible way to obtain access to a folder due to a tapjacking/overlay attack. This could lead to local escalation of privilege with User execution privileges needed. User interaction is needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43765">https://www.tenable.com/cve/CVE-2024-43765</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43763" target="_blank">CVE-2024-43763</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>In build_read_multi_rsp of gatt_sr.cc, there is a possible denial of service due to a logic error in the code. This could lead to remote (proximal/adjacent) denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43763">https://www.tenable.com/cve/CVE-2024-43763</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43096" target="_blank">CVE-2024-43096</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In build_read_multi_rsp of gatt_sr.cc, there is a possible out of bounds write due to a missing bounds check. This could lead to remote (proximal/adjacent) code execution with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43096">https://www.tenable.com/cve/CVE-2024-43096</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-43095" target="_blank">CVE-2024-43095</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple locations, there is a possible way to obtain any system permission due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-43095">https://www.tenable.com/cve/CVE-2024-43095</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:13 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-34730" target="_blank">CVE-2024-34730</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>In multiple locations, there is a possible bypass of user consent to enabling new Bluetooth HIDs due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-34730">https://www.tenable.com/cve/CVE-2024-34730</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24443" target="_blank">CVE-2024-24443</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>An uninitialized pointer dereference in the ngap_handle_pdu_session_resource_setup_response routine of OpenAirInterface CN5G AMF (oai-cn5g-amf) up to v2.0.0 allows attackers to cause a Denial of Service (DoS) via a crafted PDU Session Resource Setup Response.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-24443">https://www.tenable.com/cve/CVE-2024-24443</a></p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24428" target="_blank">CVE-2024-24428</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the oai_nas_5gmm_decode function of Open5GS </p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24427" target="_blank">CVE-2024-24427</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the amf_ue_set_suci function of Open5GS </p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24424" target="_blank">CVE-2024-24424</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>A reachable assertion in the decode_access_point_name_ie function of Magma </p></td></tr><tr><td>Tue, 21 Jan 2025 23:15:12 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-24423" target="_blank">CVE-2024-24423</a></td><td><p style="color: Red">High Severity</p>
+            
+                  Description
+                  <p>The Linux Foundation Magma </p></td></tr><tr><td>Mon, 20 Jan 2025 03:15:08 GMT</td><td><a href="verify.php?vuln_id=CVE-2024-13524" target="_blank">CVE-2024-13524</a></td><td><p style="color: Blue">Low Severity</p>
+            
+                  Description
+                  <p>A vulnerability has been found in obsproject OBS Studio up to 30.0.2 on <span style="background-color: #FFFF00">Windows</span> and classified as problematic. Affected by this vulnerability is an unknown functionality. The manipulation leads to untrusted search path. The attack needs to be approached locally. The complexity of an attack is rather high. The exploitation appears to be difficult. It is recommended to apply a patch to fix this issue. The vendor disagrees that this issue is "something worth reporting, as every attack surface requires privileged access/user compromise".</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2024-13524">https://www.tenable.com/cve/CVE-2024-13524</a></p></td></tr><tr><td>Mon, 20 Jan 2025 02:15:19 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0583" target="_blank">CVE-2025-0583</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>The a+HRD from aEnrich Technology has a Reflected Cross-site Scripting vulnerability, allowing unauthenticated remote attackers to execute arbitrary JavaScript codes in user's browser through phishing attacks.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0583">https://www.tenable.com/cve/CVE-2025-0583</a></p></td></tr><tr><td>Mon, 20 Jan 2025 02:15:18 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0578" target="_blank">CVE-2025-0578</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A vulnerability was found in Facile Sistemas Cloud Apps up to 20250107. It has been classified as problematic. Affected is an unknown function of the file /account/forgotpassword of the component Password Reset Handler. The manipulation of the argument reterros leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0578">https://www.tenable.com/cve/CVE-2025-0578</a></p></td></tr><tr><td>Mon, 20 Jan 2025 00:15:16 GMT</td><td><a href="verify.php?vuln_id=CVE-2025-0576" target="_blank">CVE-2025-0576</a></td><td><p style="color: Orange">Medium Severity</p>
+            
+                  Description
+                  <p>A vulnerability was found in Mobotix M15 4.3.4.83 and classified as problematic. This issue affects some unknown processing of the file /control/player?center&amp;eventlist&amp;pda&amp;dummy_for_reload=1736177631&amp;p_evt. The manipulation of the argument p_qual leads to cross site scripting. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>
+            
+                  <p>Read more at <a href="https://www.tenable.com/cve/CVE-2025-0576">https://www.tenable.com/cve/CVE-2025-0576</a></p></td></tr>            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Product/Service Tracker</h4>
+                    </div>
+                        <div class="card-body">
+                            <!-- No Labels Form -->
+                            <div class="form-group with-title mb-3">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Google Chrome,Jenkins,Gitlab</textarea>
+                                <label>Example Format: host/ip, host/ip, ...</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" name="createAssessment" class="btn btn-primary">Update</button>
+                                <button type="reset" class="btn btn-secondary">Reset</button>
+                            </div>
+                            <!-- End No Labels Form -->
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>RSS Security Headlines</h4>
+                </div>
+                    <div class="card-body">
+                        <!-- No Labels Form -->
+                        <!-- start sw-rss-feed code --> 
+<script type="text/javascript"> 
+    <!-- 
+    rssfeed_url = new Array(); 
+    rssfeed_url[0]="https://feeds.feedburner.com/TheHackersNews"; rssfeed_url[1]="https://news.sophos.com/en-us/feed/"; rssfeed_url[2]="http://feeds.feedburner.com/Securityweek"; rssfeed_url[3]="https://gbhackers.com/feed/"; rssfeed_url[4]="https://www.cybersecurity-insiders.com/feed/";  
+    rssfeed_frame_width="100%"; 
+    rssfeed_frame_height="1500"; 
+    rssfeed_scroll="on"; 
+    rssfeed_scroll_step="2"; 
+    rssfeed_scroll_bar="on"; 
+    rssfeed_target="_blank"; 
+    rssfeed_font_size="18"; 
+    rssfeed_font_face=""; 
+    rssfeed_border="on"; 
+    rssfeed_css_url="https://feed.surfing-waves.com/css/style1.css"; 
+    rssfeed_title="on"; 
+    rssfeed_title_name=""; 
+    rssfeed_title_bgcolor="#3366ff"; 
+    rssfeed_title_color="#fff"; 
+    rssfeed_title_bgimage=""; 
+    rssfeed_footer="off"; 
+    rssfeed_footer_name="rss feed"; 
+    rssfeed_footer_bgcolor="#fff"; 
+    rssfeed_footer_color="#333"; 
+    rssfeed_footer_bgimage=""; 
+    rssfeed_item_title_length="50"; 
+    rssfeed_item_title_color="#666"; 
+    rssfeed_item_bgcolor="#fff"; 
+    rssfeed_item_bgimage=""; 
+    rssfeed_item_border_bottom="on"; 
+    rssfeed_item_source_icon="on"; 
+    rssfeed_item_date="off"; 
+    rssfeed_item_description="on"; 
+    rssfeed_item_description_length="120"; 
+    rssfeed_item_description_color="#666"; 
+    rssfeed_item_description_link_color="#333"; 
+    rssfeed_item_description_tag="off"; 
+    rssfeed_no_items="0"; 
+    rssfeed_cache = "442e5e59ef94437919d9bca0d507d792"; 
+    //--> 
+    </script> 
+    <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
+    <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
+    <div style="color:#ccc;font-size:10px; text-align:right; width:100%px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
+    <!-- end sw-rss-feed code -->
+                        <!-- End No Labels Form -->
+                    </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="assets/extensions/dayjs/dayjs.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/static/js/pages/ui-apexchart.js"></script>
+{% endblock %}

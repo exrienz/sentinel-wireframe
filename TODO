@@ -1,0 +1,5 @@
+1. Host Assessment
+2. Threat Intel
+3. DevSecOps flow in gitlab
+4. Should log close date
+5. should also log sla breach count on each upload (Crit|High|Medium|Low) with status New or Open

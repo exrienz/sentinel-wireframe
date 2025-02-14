@@ -1,0 +1,247 @@
+{% set title = 'Manage Project' %}
+{% set filename = 'manageProject.html' %}
+
+{% extends 'src/layouts/master.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/scss/iconly.scss">
+{% endblock %}
+
+{% block content %}
+<div class="page-heading">
+    <h3>Project Configuration Dashboard</h3>
+</div> 
+<div class="page-content">
+    <!--Row-->
+    <!-- Row -->
+<section class="row">
+    <div class="col-6">
+        <!-- Column 1 -->
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Im the alert box, pop me as notification.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Create Project</h5>
+                <!-- No Labels Form -->
+                <form class="row g-3" method="post" action="/project.php">
+                    <input type="hidden" name="form_id" value="createProduct">
+                    <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+                    <div class="col-md-12">
+                        <input type="text" name="productName" class="form-control" placeholder="Project Name">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" name="createProduct" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+                <!-- End No Labels Form -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Remove Project</h5>
+                <!-- No Labels Form -->
+                <form class="row g-3" method="post" action="/project.php">
+                    <input type="hidden" name="form_id" value="removeProduct">
+                    <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+                    <div class="col-md-12">
+                        <select name="productName" id="removeProductSelect" class="form-select">
+                            <option selected="">Choose Project</option>
+                            <option value='1'>AD,WSUS,OKTA</option>
+                            <option value='2'>API Gateway</option>
+                            <!-- Additional options here -->
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <input type="hidden" name="confirm_delete" value="yes">
+                        <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to delete this product? This process is irreversible, proceed with caution!')">Remove</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+                <!-- End No Labels Form -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Create Product</h5>
+                <!-- No Labels Form -->
+                <form class="row g-3" method="post" action="/project.php">
+                    <input type="hidden" name="form_id" value="createAssessment">
+                    <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+                    <div class="col-md-4">
+                        <input name="assessmentName" type="text" class="form-control" placeholder="Product Name">
+                    </div>
+                    <div class="col-md-4">
+                        <select name="productName" id="createAssessmentProductSelect" class="form-select">
+                            <option selected="">Choose Project</option>
+                            <option value='AD,WSUS,OKTA'>Monthly VA</option>
+                            <!-- Additional options here -->
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="environment" id="createAssessmentEnvSelect" class="form-select">
+                            <option selected="">Choose Environment</option>
+                            <option value="production">Production</option>
+                            <option value="non-production">Non-Production</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" name="createAssessment" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+                <!-- End No Labels Form -->
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Remove Product</h5>
+                <!-- No Labels Form -->
+                <form class="row g-3" method="post" action="/project.php">
+                    <input type="hidden" name="form_id" value="createAssessment">
+                    <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+                    <div class="col-md-4">
+                        <select name="productName" id="createAssessmentProductSelect" class="form-select">
+                            <option selected="">Choose Project</option>
+                            <option value='AD,WSUS,OKTA'>Monthly VA</option>
+                            <!-- Additional options here -->
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="productName" id="createAssessmentProductSelect" class="form-select">
+                            <option selected="">Choose Product Name</option>
+                            <option value='AD,WSUS,OKTA'>AD,WSUS,OKTA</option>
+                            <!-- Additional options here -->
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select name="environment" id="createAssessmentEnvSelect" class="form-select">
+                            <option selected="">Choose Environment</option>
+                            <option value="production">Production</option>
+                            <option value="non-production">Non-Production</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" name="createAssessment" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+                <!-- End No Labels Form -->
+            </div>
+        </div>
+        <!-- Add additional cards as needed -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Hosts Within Air-Gapped Networks</h5>
+                <!-- No Labels Form -->
+                <div class="form-group with-title mb-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <label>Example Format: host/ip, host/ip, ...</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" name="createAssessment" class="btn btn-primary">Update</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+                <!-- End No Labels Form -->
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Project List</h4>
+            </div>
+            <div class="card-body">
+                <p>Click the project below to expand/collapse the project content.</p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Monthly VA
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item active">Production</li>
+                                        <li class="list-group-item"><a href="product.html">APP A</a></li>
+                                        <li class="list-group-item">IBG</li>
+                                        <li class="list-group-item">RSG</li>
+                                        <li class="list-group-item">Jompay</li>
+                                        <li class="list-group-item">DuitNow Pay</li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item active">Production</li>
+                                        <li class="list-group-item">FPX</li>
+                                        <li class="list-group-item">IBG</li>
+                                        <li class="list-group-item">RSG</li>
+                                        <li class="list-group-item">Jompay</li>
+                                        <li class="list-group-item">DuitNow Pay</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Quarterly PCIDSS
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Onboarding
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Crowdstrike
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</section>
+
+ 
+</div>
+
+{% endblock %}
+{% block js %}
+<script src="assets/extensions/dayjs/dayjs.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/static/js/pages/ui-apexchart.js"></script>
+{% endblock %}
