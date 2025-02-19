@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NPM_CONFIG_PRODUCTION: "false"  # Ensures devDependencies (including husky) are installed
+      NPM_CONFIG_PRODUCTION: "false"  # Force installation of devDependencies
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,10 +20,13 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - name: Install dependencies (ignore scripts)
+        run: |
+          npm install --legacy-peer-deps --ignore-scripts
+          # Now manually run prepare to install husky hooks
+          npm run prepare || true
 
       - name: Build project
         run: npm run build
 
-      # Optionally, add steps to run tests or deploy...
+      # Optionally, add test or deploy steps here
