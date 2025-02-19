@@ -29,9 +29,10 @@ jobs:
       - name: Build project
         run: npm run build
         
-    secret_scanning:
+  secret_scanning:
     name: Secret Scanning (Talisman)
     runs-on: self-hosted
+    needs: build  # Ensure this runs after the build
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -43,8 +44,9 @@ jobs:
           ~/install-talisman.sh --no-prompt  # Skip interactive prompt
 
           # Manually set environment variables
-          export TALISMAN_HOME="$HOME/.talisman"
-          export PATH="$TALISMAN_HOME/bin:$PATH"
+          echo 'export TALISMAN_HOME="$HOME/.talisman"' >> ~/.bashrc
+          echo 'export PATH="$TALISMAN_HOME/bin:$PATH"' >> ~/.bashrc
+          source ~/.bashrc
 
       - name: Verify Talisman Installation
         run: talisman --version
@@ -52,9 +54,6 @@ jobs:
       - name: Run Talisman Secret Scan
         run: talisman --scan .
 
-
-
-  
   sca_check:
     name: Software Composition Analysis (SCA)
     runs-on: ubuntu-latest
