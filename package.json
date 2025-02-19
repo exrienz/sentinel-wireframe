@@ -72,6 +72,7 @@
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
     "@sweetalert2/theme-dark": "^5.0.15",
     "bestzip": "^2.2.1",
     "browser-sync": "^2.27.11",
