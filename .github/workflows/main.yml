@@ -42,7 +42,7 @@ jobs:
           export TERM=dumb  # Prevent tput errors
           curl -sSL https://thoughtworks.github.io/talisman/install.sh > ~/install-talisman.sh
           chmod +x ~/install-talisman.sh
-          ~/install-talisman.sh --no-prompt || true  # Ignore pre-push hook failure
+          ~/install-talisman.sh
 
           # Manually set Talisman PATH
           export TALISMAN_HOME="$HOME/.talisman"
