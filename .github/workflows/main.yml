@@ -52,11 +52,39 @@ jobs:
       - name: Run npm Audit for SCA
         run: npm audit --audit-level=moderate
         continue-on-error: true
+
+  # ---------------------------
+  # 3. Static Application Security Testing (SAST) with SonarQube
+  # ---------------------------
+  sast_analysis:
+    name: SAST Analysis (SonarQube)
+    runs-on: self-hosted
+    needs: sca_check
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+  
+     - name: Setup Node.js Environment
+        uses: actions/setup-node@v3    # See [7] for details on the setup-node action [[7]]
+        with:
+          node-version: '18'
+  
+      - name: Run SonarQube Scan
+        env:
+          # SONAR_TOKEN should be stored securely in GitHub Secrets.
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=sentinel-wireframe \
+            -Dsonar.sources=src \
+            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}\
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        continue-on-error: true
   
   build_deploy_uat:
     name: Build & Deploy to UAT Kubernetes Cluster
     runs-on: self-hosted
-    needs: sca_check
+    needs: sast_analysis
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
