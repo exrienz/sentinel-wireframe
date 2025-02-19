@@ -29,7 +29,7 @@ jobs:
       - name: Build project
         run: npm run build
         
-  secret_scanning:
+    secret_scanning:
     name: Secret Scanning (Talisman)
     runs-on: self-hosted
     steps:
@@ -38,11 +38,11 @@ jobs:
 
       - name: Install Talisman CLI
         run: |
-          curl --silent https://raw.githubusercontent.com/thoughtworks/talisman/main/global_install_scripts/install.bash > /tmp/install_talisman.bash
-          chmod +x /tmp/install_talisman.bash
-          echo "4" | /tmp/install_talisman.bash  # Auto-selects "I will set it later"
+          curl -sSL https://thoughtworks.github.io/talisman/install.sh > ~/install-talisman.sh
+          chmod +x ~/install-talisman.sh
+          ~/install-talisman.sh --no-prompt  # Skip interactive prompt
 
-          # Manually set up environment variables
+          # Manually set environment variables
           export TALISMAN_HOME="$HOME/.talisman"
           export PATH="$TALISMAN_HOME/bin:$PATH"
 
@@ -51,6 +51,7 @@ jobs:
 
       - name: Run Talisman Secret Scan
         run: talisman --scan .
+
 
 
   
