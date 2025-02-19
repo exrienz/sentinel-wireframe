@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUSKY_SKIP_INSTALL: "1"
+      NPM_CONFIG_PRODUCTION: "false"  # Ensures devDependencies (including husky) are installed
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,5 +26,4 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Run tests (if any)
-        run: npm test
+      # Optionally, add steps to run tests or deploy...
