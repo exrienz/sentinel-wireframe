@@ -32,27 +32,28 @@ jobs:
   secret_scanning:
     name: Secret Scanning (Talisman)
     runs-on: self-hosted
-    needs: build  # Ensure this runs after the build
+    needs: build
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Install Talisman CLI
         run: |
+          export TERM=dumb  # Prevent tput errors
           curl -sSL https://thoughtworks.github.io/talisman/install.sh > ~/install-talisman.sh
           chmod +x ~/install-talisman.sh
-          ~/install-talisman.sh  # Skip interactive prompt
+          ~/install-talisman.sh --no-prompt || true  # Ignore pre-push hook failure
 
-          # Manually set environment variables
-          echo 'export TALISMAN_HOME="$HOME/.talisman"' >> ~/.bashrc
-          echo 'export PATH="$TALISMAN_HOME/bin:$PATH"' >> ~/.bashrc
-          source ~/.bashrc
+          # Manually set Talisman PATH
+          export TALISMAN_HOME="$HOME/.talisman"
+          export PATH="$TALISMAN_HOME/bin:$PATH"
 
       - name: Verify Talisman Installation
         run: talisman --version
 
       - name: Run Talisman Secret Scan
         run: talisman --scan .
+
 
   sca_check:
     name: Software Composition Analysis (SCA)
