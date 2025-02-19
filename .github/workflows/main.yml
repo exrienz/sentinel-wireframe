@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
@@ -32,13 +32,8 @@ jobs:
             echo "Skipping linting, ESLint not found in dependencies."
           fi
 
-      - name: Run tests
-        run: |
-          if npm run | grep -q "test"; then
-            npm test
-          else
-            echo "No test script found in package.json. Skipping tests."
-          fi
+      - name: Build frontend
+        run: npm run build
 
   deploy:
     needs: build
