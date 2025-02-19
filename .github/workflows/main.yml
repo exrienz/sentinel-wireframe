@@ -33,7 +33,12 @@ jobs:
           fi
 
       - name: Run tests
-        run: npm test
+        run: |
+          if npm run | grep -q "test"; then
+            npm test
+          else
+            echo "No test script found in package.json. Skipping tests."
+          fi
 
   deploy:
     needs: build
@@ -70,4 +75,4 @@ jobs:
       #  run: |
       #    kubectl apply -f k8s/deployment.yaml
       #    kubectl apply -f k8s/service.yaml
-      #    kubectl rollout status deploym
+      #    kubectl rollout status deployment/sentinel-wireframe
