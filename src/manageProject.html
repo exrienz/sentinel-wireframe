@@ -1,5 +1,12 @@
-{% set title = 'Manage Project' %} {% set filename = 'manageProject.html' %} {% extends 'src/layouts/master.html' %} {% block styles %}
-<link rel="stylesheet" href="/assets/scss/iconly.scss">{% endblock %} {% block content %}
+{% set title = 'Manage Project' %}
+{% set filename = 'manageProject.html' %}
+{% extends 'src/layouts/master.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="/assets/css/iconly.css">
+{% endblock %}
+
+{% block content %}
 <div class="page-heading">
   <h3>Project Configuration Dashboard</h3>
 </div>
@@ -7,138 +14,134 @@
   <section class="row">
     <div class="col-6">
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-        Im the alert box, pop me as notification.
+        I'm the alert box, pop me as notification.
       </div>
+
+      <!-- Create Project Card -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Create Project</h5>
           <form class="row g-3" method="post" action="/project.php">
-            <input type="hidden" name="form_id" value="createProduct"> <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+            <input type="hidden" name="form_id" value="createProject">
+            <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
             <div class="col-md-12">
-              <input type="text" name="productName" class="form-control" placeholder="Project Name">
+              <input type="text" name="projectName" class="form-control" placeholder="Project Name">
             </div>
             <div class="text-center">
-              <button type="submit" name="createProduct" class="btn btn-primary">Submit</button> <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" name="createProject" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
           </form>
         </div>
       </div>
+
+      <!-- Remove Project Card -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Remove Project</h5>
           <form class="row g-3" method="post" action="/project.php">
-            <input type="hidden" name="form_id" value="removeProduct"> <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+            <input type="hidden" name="form_id" value="removeProject">
+            <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
             <div class="col-md-12">
-              <select name="productName" id="removeProductSelect" class="form-select">
-                <option selected>
-                  Choose Project
-                </option>
-                <option value='1'>
-                  AD,WSUS,OKTA
-                </option>
-                <option value='2'>
-                  API Gateway
-                </option>
+              <select name="projectName" id="removeProjectSelect" class="form-select">
+                <option selected>Choose Project</option>
+                <option value="1">AD,WSUS,OKTA</option>
+                <option value="2">API Gateway</option>
               </select>
             </div>
             <div class="text-center">
-              <input type="hidden" name="confirm_delete" value="yes"> <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to delete this product? This process is irreversible, proceed with caution!')">Remove</button> <button type="reset" class="btn btn-secondary">Reset</button>
+              <input type="hidden" name="confirm_delete" value="yes">
+              <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to delete this project? This process is irreversible, proceed with caution!')">Remove</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
           </form>
         </div>
       </div>
+
+      <!-- Create Product Card -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Create Product</h5>
           <form class="row g-3" method="post" action="/project.php">
-            <input type="hidden" name="form_id" value="createAssessment"> <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+            <input type="hidden" name="form_id" value="createProduct">
+            <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
             <div class="col-md-4">
-              <input name="assessmentName" type="text" class="form-control" placeholder="Product Name">
+              <input type="text" name="productName" class="form-control" placeholder="Product Name">
             </div>
             <div class="col-md-4">
-              <select name="productName" id="createAssessmentProductSelect" class="form-select">
-                <option selected>
-                  Choose Project
-                </option>
-                <option value='AD,WSUS,OKTA'>
-                  Monthly VA
-                </option>
+              <select name="projectId" id="createProductProjectSelect" class="form-select">
+                <option selected>Choose Project</option>
+                <option value="1">AD,WSUS,OKTA</option>
               </select>
             </div>
             <div class="col-md-4">
-              <select name="environment" id="createAssessmentEnvSelect" class="form-select">
-                <option selected>
-                  Choose Environment
-                </option>
-                <option value="production">
-                  Production
-                </option>
-                <option value="non-production">
-                  Non-Production
-                </option>
+              <select name="environment" id="createProductEnvSelect" class="form-select">
+                <option selected>Choose Environment</option>
+                <option value="production">Production</option>
+                <option value="non-production">Non-Production</option>
               </select>
             </div>
             <div class="text-center">
-              <button type="submit" name="createAssessment" class="btn btn-primary">Submit</button> <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" name="createProduct" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
           </form>
         </div>
       </div>
+
+      <!-- Remove Product Card -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Remove Product</h5>
           <form class="row g-3" method="post" action="/project.php">
-            <input type="hidden" name="form_id" value="createAssessment"> <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+            <input type="hidden" name="form_id" value="removeProduct">
+            <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
             <div class="col-md-4">
-              <select name="productName" id="createAssessmentProductSelect" class="form-select">
-                <option selected>
-                  Choose Project
-                </option>
-                <option value='AD,WSUS,OKTA'>
-                  Monthly VA
-                </option>
+              <select name="projectId" id="removeProductProjectSelect" class="form-select">
+                <option selected>Choose Project</option>
+                <option value="1">AD,WSUS,OKTA</option>
               </select>
             </div>
             <div class="col-md-4">
-              <select name="productName" id="createAssessmentProductSelect" class="form-select">
-                <option selected>
-                  Choose Product Name
-                </option>
-                <option value='AD,WSUS,OKTA'>
-                  AD,WSUS,OKTA
-                </option>
+              <select name="productName" id="removeProductProductSelect" class="form-select">
+                <option selected>Choose Product Name</option>
+                <option value="AD,WSUS,OKTA">AD,WSUS,OKTA</option>
               </select>
             </div>
             <div class="col-md-4">
-              <select name="environment" id="createAssessmentEnvSelect" class="form-select">
-                <option selected>
-                  Choose Environment
-                </option>
-                <option value="production">
-                  Production
-                </option>
-                <option value="non-production">
-                  Non-Production
-                </option>
+              <select name="environment" id="removeProductEnvSelect" class="form-select">
+                <option selected>Choose Environment</option>
+                <option value="production">Production</option>
+                <option value="non-production">Non-Production</option>
               </select>
             </div>
             <div class="text-center">
-              <button type="submit" name="createAssessment" class="btn btn-primary">Submit</button> <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" name="removeProduct" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
           </form>
         </div>
       </div>
+
+      <!-- Hosts Within Air-Gapped Networks Card -->
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Hosts Within Air-Gapped Networks</h5>
-          <div class="form-group with-title mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> <label>Example Format: host/ip, host/ip, ...</label>
-          </div>
-          <div class="text-center">
-            <button type="submit" name="createAssessment" class="btn btn-primary">Update</button> <button type="reset" class="btn btn-secondary">Reset</button>
-          </div>
+          <form class="row g-3" method="post" action="/project.php">
+            <input type="hidden" name="form_id" value="updateHosts">
+            <input type="hidden" name="token" value="3fe3c89d5abc57e187fdb1dcea007103cfabfb1b9f6b0078bb228d9f525f225a">
+            <div class="form-group with-title mb-3">
+              <textarea class="form-control" id="hostsTextarea" name="hosts" rows="3"></textarea>
+              <label for="hostsTextarea">Example Format: host/ip, host/ip, ...</label>
+            </div>
+            <div class="text-center">
+              <button type="submit" name="updateHosts" class="btn btn-primary">Update</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+          </form>
         </div>
       </div>
+
     </div>
     <div class="col-6">
       <div class="card">
@@ -149,7 +152,11 @@
           <p>Click the project below to expand/collapse the project content.</p>
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Monthly VA</button></h2>
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Monthly VA
+                </button>
+              </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="card-body">
@@ -177,36 +184,56 @@
                 </div>
               </div>
             </div>
+            
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Quarterly PCIDSS</button></h2>
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Quarterly PCIDSS
+                </button>
+              </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes. These classes control the overall appearance as well as the showing and hiding via CSS transitions.
                 </div>
               </div>
             </div>
+            
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Onboarding</button></h2>
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Onboarding
+                </button>
+              </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes to style the content.
                 </div>
               </div>
             </div>
+            
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Crowdstrike</button></h2>
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Crowdstrike
+                </button>
+              </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <strong>This is the fourth item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the necessary classes to style and show the content.
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
-      </div>
-    </section></div>{% endblock %} {% block js %} 
-    <script src="assets/extensions/dayjs/dayjs.min.js"></script> 
-    <script src="assets/extensions/apexcharts/apexcharts.min.js"></script> 
-    <script src="assets/static/js/pages/ui-apexchart.js"></script> {% endblock %}
+    </div>
+  </section>
+</div>
+{% endblock %}
 
+{% block js %}
+<script src="assets/extensions/dayjs/dayjs.min.js"></script>
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+<script src="assets/static/js/pages/ui-apexchart.js"></script>
+{% endblock %}
