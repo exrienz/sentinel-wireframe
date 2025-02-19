@@ -1,118 +1,258 @@
 {% set title = 'Manage Owner' %} {% set filename = 'manageOwner.html' %} {% extends 'src/layouts/master.html' %} {% block styles %}
-<link rel="stylesheet" href="/assets/scss/iconly.scss"> {% endblock %} {% block content %} <div class="page-heading">
+<link rel="stylesheet" href="/assets/scss/iconly.scss">{% endblock %} {% block content %}
+<div class="page-heading">
   <h3>Owner Configuration Dashboard</h3>
 </div>
 <div class="page-content">
-  <!--Row-->
-  <!-- Row -->
   <section class="row">
     <div class="row">
-      <!-- Middle side columns -->
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Owner Access Control</h5>
-                <br>
+                <h5 class="card-title">Owner Access Control</h5><br>
                 <form class="row g-3" method="post" action="/manageOwner.php">
-                  <input type="hidden" name="form_id" value="updateAccess">
-                  <input type="hidden" name="token" value="3103c5ef90123fe850b3c9321389ab845d4f22048db8b2f8c20dbe0aba7453f2">
+                  <input type="hidden" name="form_id" value="updateAccess"> <input type="hidden" name="token" value="3103c5ef90123fe850b3c9321389ab845d4f22048db8b2f8c20dbe0aba7453f2">
                   <div class="col-md-3">
                     <select id="inputState1" name="owner" class="form-select">
-                      <option selected="">Select owner</option>
-                      <option value="6">Bala Murugan M</option>
-                      <option value="7">Khairul Anwar Abdullah</option>
-                      <option value="8">Madhuram Kumar Chandrasekaran</option>
-                      <option value="9">Muzaffar Mohamed</option>
-                      <option value="10">Manogaran A/L Sabapathy Chettiar Nagappan</option>
-                      <option value="11">Muhammad Iqbal Sidik</option>
-                      <option value="12">Sandeep</option>
-                      <option value="13">Nazman Ariffin</option>
-                      <option value="14">Chan Keng Lin</option>
-                      <option value="15">Hisyam</option>
-                      <option value="18">Chen Ming Kit</option>
-                      <option value="19">Siti Norahayu</option>
-                      <option value="22">Omar</option>
-                      <option value="23">Judy Michael</option>
-                      <option value="24">YUNIL RAAJ RAJA KUMAR</option>
-                      <option value="28">Chiam Yeong Fei</option>
-                      <option value="29">CHIN KEE FOO</option>
-                      <option value="30">Afiq Ali</option>
-                      <option value="31">Muhd Iskandar Bin Muhd Razali</option>
-                      <option value="32">Chew Wei Chun</option>
-                      <option value="33">Vishan Shanmuga Kumar</option>
-                      <option value="36">VOON FUNG CHOO</option>
-                      <option value="37">Faisal Johari</option>
-                      <option value="38">Preman</option>
-                      <option value="39">Meor Muhammad Kamal</option>
-                      <option value="40">Fahsha</option>
-                      <option value="41">Sheikh Mohamad Redzuan</option>
-                      <option value="42">Mulhein</option>
-                      <option value="43">Mohd Nizam</option>
-                      <option value="44">Asyraf</option>
-                      <option value="45">Nurul Hidayati Binti Md Latiff</option>
-                      <option value="46">Hamdan</option>
-                      <option value="47">Shaheezul</option>
-                      <option value="48">Nur Bariyatul Akma</option>
-                      <option value="49">Liew</option>
-                      <option value="53">Muhammad Sallehuddin</option>
-                      <option value="54">Muhammad Amir Azwan</option>
-                      <option value="55">Ching Yaw Jin</option>
-                      <option value="56">Yow Siew Wai</option>
-                      <option value="57">Yong Chun Kiat</option>
-                      <option value="58">Chuo Ngiu Bing</option>
-                      <option value="59">PAVITRAN PUPATHE</option>
-                      <option value="60">Nanda Kumar A/L Rajendera</option>
-                      <option value="67">Kamsiah</option>
+                      <option selected>
+                        Select owner
+                      </option>
+                      <option value="6">
+                        Bala Murugan M
+                      </option>
+                      <option value="7">
+                        Khairul Anwar Abdullah
+                      </option>
+                      <option value="8">
+                        Madhuram Kumar Chandrasekaran
+                      </option>
+                      <option value="9">
+                        Muzaffar Mohamed
+                      </option>
+                      <option value="10">
+                        Manogaran A/L Sabapathy Chettiar Nagappan
+                      </option>
+                      <option value="11">
+                        Muhammad Iqbal Sidik
+                      </option>
+                      <option value="12">
+                        Sandeep
+                      </option>
+                      <option value="13">
+                        Nazman Ariffin
+                      </option>
+                      <option value="14">
+                        Chan Keng Lin
+                      </option>
+                      <option value="15">
+                        Hisyam
+                      </option>
+                      <option value="18">
+                        Chen Ming Kit
+                      </option>
+                      <option value="19">
+                        Siti Norahayu
+                      </option>
+                      <option value="22">
+                        Omar
+                      </option>
+                      <option value="23">
+                        Judy Michael
+                      </option>
+                      <option value="24">
+                        YUNIL RAAJ RAJA KUMAR
+                      </option>
+                      <option value="28">
+                        Chiam Yeong Fei
+                      </option>
+                      <option value="29">
+                        CHIN KEE FOO
+                      </option>
+                      <option value="30">
+                        Afiq Ali
+                      </option>
+                      <option value="31">
+                        Muhd Iskandar Bin Muhd Razali
+                      </option>
+                      <option value="32">
+                        Chew Wei Chun
+                      </option>
+                      <option value="33">
+                        Vishan Shanmuga Kumar
+                      </option>
+                      <option value="36">
+                        VOON FUNG CHOO
+                      </option>
+                      <option value="37">
+                        Faisal Johari
+                      </option>
+                      <option value="38">
+                        Preman
+                      </option>
+                      <option value="39">
+                        Meor Muhammad Kamal
+                      </option>
+                      <option value="40">
+                        Fahsha
+                      </option>
+                      <option value="41">
+                        Sheikh Mohamad Redzuan
+                      </option>
+                      <option value="42">
+                        Mulhein
+                      </option>
+                      <option value="43">
+                        Mohd Nizam
+                      </option>
+                      <option value="44">
+                        Asyraf
+                      </option>
+                      <option value="45">
+                        Nurul Hidayati Binti Md Latiff
+                      </option>
+                      <option value="46">
+                        Hamdan
+                      </option>
+                      <option value="47">
+                        Shaheezul
+                      </option>
+                      <option value="48">
+                        Nur Bariyatul Akma
+                      </option>
+                      <option value="49">
+                        Liew
+                      </option>
+                      <option value="53">
+                        Muhammad Sallehuddin
+                      </option>
+                      <option value="54">
+                        Muhammad Amir Azwan
+                      </option>
+                      <option value="55">
+                        Ching Yaw Jin
+                      </option>
+                      <option value="56">
+                        Yow Siew Wai
+                      </option>
+                      <option value="57">
+                        Yong Chun Kiat
+                      </option>
+                      <option value="58">
+                        Chuo Ngiu Bing
+                      </option>
+                      <option value="59">
+                        PAVITRAN PUPATHE
+                      </option>
+                      <option value="60">
+                        Nanda Kumar A/L Rajendera
+                      </option>
+                      <option value="67">
+                        Kamsiah
+                      </option>
                     </select>
                   </div>
                   <div class="col-md-3">
                     <select id="inputState1" name="permission" class="form-select">
-                      <option selected="">Choose Permission</option>
-                      <option value="allow">Allowed to Access</option>
-                      <option value="disallow">Disallowed to Access</option>
+                      <option selected>
+                        Choose Permission
+                      </option>
+                      <option value="allow">
+                        Allowed to Access
+                      </option>
+                      <option value="disallow">
+                        Disallowed to Access
+                      </option>
                     </select>
                   </div>
                   <div class="col-md-3">
                     <select id="inputState2" name="product" class="form-select">
-                      <option selected="">To Project</option>
-                      <option value="1">Monthly VA</option>
-                      <option value="2">Quarterly PCIDSS</option>
-                      <option value="3">Onboarding</option>
-                      <option value="4">Crowdstrike</option>
+                      <option selected>
+                        To Project
+                      </option>
+                      <option value="1">
+                        Monthly VA
+                      </option>
+                      <option value="2">
+                        Quarterly PCIDSS
+                      </option>
+                      <option value="3">
+                        Onboarding
+                      </option>
+                      <option value="4">
+                        Crowdstrike
+                      </option>
                     </select>
                   </div>
                   <div class="col-md-3">
                     <select id="inputState2" name="product" class="form-select">
-                      <option selected="">To Product</option>
-                      <option value="1">AD,WSUS,OKTA</option>
-                      <option value="2">API Gateway</option>
-                      <option value="3">Autobilling</option>
-                      <option value="4">Backup</option>
-                      <option value="5">BIDWH</option>
-                      <option value="6">DDADMS</option>
-                      <option value="8">Espick</option>
-                      <option value="9">FIRPT</option>
-                      <option value="10">FPX</option>
-                      <option value="11">IBG</option>
-                      <option value="12">JomPay</option>
-                      <option value="13">Kubernetes</option>
-                      <option value="14">RPP</option>
-                      <option value="15">RSG</option>
-                      <option value="16">SST MATM</option>
-                      <option value="22">NFP</option>
-                      <option value="23">Duitnow Pay</option>
-                      <option value="24">AD,WSUS,OKTA - Critical</option>
-                      <option value="25">AD,WSUS,OKTA - NonCritical </option>
+                      <option selected>
+                        To Product
+                      </option>
+                      <option value="1">
+                        AD,WSUS,OKTA
+                      </option>
+                      <option value="2">
+                        API Gateway
+                      </option>
+                      <option value="3">
+                        Autobilling
+                      </option>
+                      <option value="4">
+                        Backup
+                      </option>
+                      <option value="5">
+                        BIDWH
+                      </option>
+                      <option value="6">
+                        DDADMS
+                      </option>
+                      <option value="8">
+                        Espick
+                      </option>
+                      <option value="9">
+                        FIRPT
+                      </option>
+                      <option value="10">
+                        FPX
+                      </option>
+                      <option value="11">
+                        IBG
+                      </option>
+                      <option value="12">
+                        JomPay
+                      </option>
+                      <option value="13">
+                        Kubernetes
+                      </option>
+                      <option value="14">
+                        RPP
+                      </option>
+                      <option value="15">
+                        RSG
+                      </option>
+                      <option value="16">
+                        SST MATM
+                      </option>
+                      <option value="22">
+                        NFP
+                      </option>
+                      <option value="23">
+                        Duitnow Pay
+                      </option>
+                      <option value="24">
+                        AD,WSUS,OKTA - Critical
+                      </option>
+                      <option value="25">
+                        AD,WSUS,OKTA - NonCritical
+                      </option>
                     </select>
                   </div>
                   <div class="col-sm-12 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
-                    <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                    <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button> <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
                   </div>
                 </form>
-                <!-- End No Labels Form -->
               </div>
             </div>
           </div>
@@ -124,23 +264,18 @@
             <h4>Project List</h4>
           </div>
           <div class="card-body">
-            <p>The following is a list of projects, products, and their respective owners.</p>
-            <br />
+            <p>The following is a list of projects, products, and their respective owners.</p><br>
             <div class="accordion accordion-flush" id="accordionFlushExample">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> Monthly VA </button>
-                </h2>
+                <h2 class="accordion-header" id="flush-headingOne"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Monthly VA</button></h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <div class="col-lg-12">
                       <div class="row">
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">AD,WSUS,OKTA </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">AD,WSUS,OKTA</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">Asyraf</li>
@@ -148,17 +283,13 @@
                                 <li class="list-group-item">Nurul Hidayati Binti Md Latiff</li>
                                 <li class="list-group-item">Bala Murugan M</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">API Gateway </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">API Gateway</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Khairul Anwar Abdullah</li>
                                 <li class="list-group-item">Bala Murugan M</li>
@@ -167,49 +298,37 @@
                                 <li class="list-group-item">Sandeep</li>
                                 <li class="list-group-item">Vishan Shanmuga Kumar</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">Autobilling </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">Autobilling</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Asyraf</li>
                                 <li class="list-group-item">Hamdan</li>
                                 <li class="list-group-item">Nurul Hidayati Binti Md Latiff</li>
                                 <li class="list-group-item">Muhammad Amir Azwan</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">Backup </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">Backup</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Chan Keng Lin</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">BIDWH </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">BIDWH</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">Bala Murugan M</li>
@@ -217,17 +336,13 @@
                                 <li class="list-group-item">Vishan Shanmuga Kumar</li>
                                 <li class="list-group-item">Hamdan</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">DDADMS </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">DDADMS</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Sandeep</li>
@@ -237,17 +352,13 @@
                                 <li class="list-group-item">PAVITRAN PUPATHE</li>
                                 <li class="list-group-item">CHIN KEE FOO</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">Espick </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">Espick</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Nazman Ariffin</li>
                                 <li class="list-group-item">Hisyam</li>
@@ -259,34 +370,26 @@
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">Nanda Kumar A/L Rajendera</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">FIRPT </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">FIRPT</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Chiam Yeong Fei</li>
                                 <li class="list-group-item">PAVITRAN PUPATHE</li>
                                 <li class="list-group-item">Chan Keng Lin</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">FPX </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">FPX</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Sandeep</li>
@@ -297,17 +400,13 @@
                                 <li class="list-group-item">Shaheezul</li>
                                 <li class="list-group-item">Nanda Kumar A/L Rajendera</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">IBG </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">IBG</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">Muhd Iskandar Bin Muhd Razali</li>
@@ -315,17 +414,13 @@
                                 <li class="list-group-item">Hamdan</li>
                                 <li class="list-group-item">Nur Bariyatul Akma</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">JomPay </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">JomPay</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">CHIN KEE FOO</li>
@@ -336,31 +431,23 @@
                                 <li class="list-group-item">Fahsha</li>
                                 <li class="list-group-item">Hamdan</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">Kubernetes </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">Kubernetes</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">VOON FUNG CHOO</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">RPP </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">RPP</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Hisyam</li>
                                 <li class="list-group-item">Bala Murugan M</li>
@@ -371,67 +458,51 @@
                                 <li class="list-group-item">Vishan Shanmuga Kumar</li>
                                 <li class="list-group-item">Nanda Kumar A/L Rajendera</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">RSG </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">RSG</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Muhammad Iqbal Sidik</li>
                                 <li class="list-group-item">Hamdan</li>
                                 <li class="list-group-item">Nur Bariyatul Akma</li>
                                 <li class="list-group-item">Muhammad Amir Azwan</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">SST MATM </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">SST MATM</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Hisyam</li>
                                 <li class="list-group-item">CHIN KEE FOO</li>
                                 <li class="list-group-item">Hamdan</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">NFP </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">NFP</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Khairul Anwar Abdullah</li>
                                 <li class="list-group-item">Yow Siew Wai</li>
                                 <li class="list-group-item">Yong Chun Kiat</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- Sales Card -->
                         <div class="col-xxl-3 col-md-4">
                           <div class="card info-card sales-card">
                             <div class="card-body">
-                              <h5 class="card-title">Duitnow Pay </h5>
-                              <!-- Default List group -->
+                              <h5 class="card-title">Duitnow Pay</h5>
                               <ul class="list-group">
                                 <li class="list-group-item">Bala Murugan M</li>
                                 <li class="list-group-item">Ching Yaw Jin</li>
@@ -441,39 +512,36 @@
                                 <li class="list-group-item">Khairul Anwar Abdullah</li>
                                 <li class="list-group-item">Sandeep</li>
                               </ul>
-                              <!-- End Default List group -->
                             </div>
                           </div>
                         </div>
-                        <!-- End Sales Card -->
-                        <!-- End content -->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"> Quarterly PCIDSS </button>
-                </h2>
+                <h2 class="accordion-header" id="flush-headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Quarterly PCIDSS</button></h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content. </div>
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"> Onboarding </button>
-                </h2>
+                <h2 class="accordion-header" id="flush-headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Onboarding</button></h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application. </div>
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                  </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"> Crowdstrike </button>
-                </h2>
+                <h2 class="accordion-header" id="flush-headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Crowdstrike</button></h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application. </div>
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                  </div>
                 </div>
               </div>
             </div>
@@ -481,7 +549,8 @@
         </div>
       </div>
     </div>
-  </section>
-{% endblock %} {% block js %} <script src="assets/extensions/dayjs/dayjs.min.js"></script>
-<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="assets/static/js/pages/ui-apexchart.js"></script> {% endblock %}
+  </section>{% endblock %} {% block js %} 
+  <script src="assets/extensions/dayjs/dayjs.min.js"></script> 
+  <script src="assets/extensions/apexcharts/apexcharts.min.js"></script> 
+  <script src="assets/static/js/pages/ui-apexchart.js"></script> {% endblock %}
+</div>
