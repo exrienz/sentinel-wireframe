@@ -95,7 +95,7 @@
       "publish": false
     },
     "scripts": {
-  "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; else echo 'Skipping husky install in production'; fi"
+      "prepare": "husky install || true"
     },
     "github": {
       "release": true,
