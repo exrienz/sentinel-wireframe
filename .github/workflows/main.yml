@@ -41,7 +41,7 @@ jobs:
         run: |
           curl -sSL https://thoughtworks.github.io/talisman/install.sh > ~/install-talisman.sh
           chmod +x ~/install-talisman.sh
-          ~/install-talisman.sh --no-prompt  # Skip interactive prompt
+          ~/install-talisman.sh  # Skip interactive prompt
 
           # Manually set environment variables
           echo 'export TALISMAN_HOME="$HOME/.talisman"' >> ~/.bashrc
