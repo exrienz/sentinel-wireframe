@@ -39,12 +39,19 @@ jobs:
       - name: Install Talisman CLI
         run: |
           curl --silent https://raw.githubusercontent.com/thoughtworks/talisman/main/global_install_scripts/install.bash > /tmp/install_talisman.bash
-          /bin/bash /tmp/install_talisman.bash
-          echo 'export PATH=$PATH:$HOME/.talisman/bin' >> ~/.bashrc
-          source ~/.bashrc
+          chmod +x /tmp/install_talisman.bash
+          echo "4" | /tmp/install_talisman.bash  # Auto-selects "I will set it later"
+
+          # Manually set up environment variables
+          export TALISMAN_HOME="$HOME/.talisman"
+          export PATH="$TALISMAN_HOME/bin:$PATH"
+
+      - name: Verify Talisman Installation
+        run: talisman --version
 
       - name: Run Talisman Secret Scan
         run: talisman --scan .
+
 
   
   sca_check:
