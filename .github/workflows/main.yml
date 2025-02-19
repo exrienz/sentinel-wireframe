@@ -107,4 +107,4 @@ jobs:
 
       - name: Push Docker Image
         if: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
-        run: docker push nfancy/omix:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest
