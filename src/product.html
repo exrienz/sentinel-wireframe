@@ -1,20 +1,16 @@
 {% set title = 'Product' %} {% set filename = 'product.html' %} {% extends 'src/layouts/master.html' %} {% block styles %}
 <link rel="stylesheet" href="/assets/scss/iconly.scss">
-<link rel="stylesheet" href="assets/extensions/choices.js/public/assets/styles/choices.css"> {% endblock %} {% block content %} <div class="page-heading">
-  <h3>APP A Findings Dashboard </h3>Last Update : 04-01-2025 <code>|</code> Muzaffar Mohamed
+<link rel="stylesheet" href="assets/extensions/choices.js/public/assets/styles/choices.css">{% endblock %} {% block content %}
+<div class="page-heading">
+  <h3>APP A Findings Dashboard</h3>Last Update : 04-01-2025 <code>|</code> Muzaffar Mohamed
 </div>
 <div class="page-content">
-  <!--Row1-->
   <section class="row">
-    <!-- Card 1 -->
     <div class="col-3">
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <div class="stats-icon red mb-2 me-3">
-              <!-- Added margin-right -->
-              <i class="fas fa-frown"></i>
-            </div>
+            <div class="stats-icon red mb-2 me-3"></div>
             <div>
               <h6 class="text-muted font-semibold">New Vulnerability</h6>
               <h6 class="font-extrabold mb-0">110,000</h6>
@@ -23,15 +19,11 @@
         </div>
       </div>
     </div>
-    <!-- Card 2 -->
     <div class="col-3">
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <div class="stats-icon red mb-2 me-3">
-              <!-- Added margin-right -->
-              <i class="fas fa-grimace"></i>
-            </div>
+            <div class="stats-icon red mb-2 me-3"></div>
             <div>
               <h6 class="text-muted font-semibold">Aging Vulnerability</h6>
               <h6 class="font-extrabold mb-0">12,000</h6>
@@ -40,15 +32,11 @@
         </div>
       </div>
     </div>
-    <!-- Card 3 -->
     <div class="col-3">
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <div class="stats-icon black mb-2 me-3">
-              <!-- Added margin-right -->
-              <i class="fas fa-grin-beam-sweat"></i>
-            </div>
+            <div class="stats-icon black mb-2 me-3"></div>
             <div>
               <h6 class="text-muted font-semibold">Exempted Vulnerability</h6>
               <h6 class="font-extrabold mb-0">2,000</h6>
@@ -57,15 +45,11 @@
         </div>
       </div>
     </div>
-    <!-- Card 4 -->
     <div class="col-3">
       <div class="card">
         <div class="card-body">
           <div class="d-flex align-items-center">
-            <div class="stats-icon black mb-2 me-3">
-              <!-- Added margin-right -->
-              <i class="fas fa-exclamation-triangle"></i>
-            </div>
+            <div class="stats-icon black mb-2 me-3"></div>
             <div>
               <h6 class="text-muted font-semibold">Total Vulnerability</h6>
               <h6 class="font-extrabold mb-0">122,000</h6>
@@ -75,8 +59,6 @@
       </div>
     </div>
   </section>
-  <!--E1 Row-->
-  <!--Row2-->
   <section class="row">
     <div class="col-12">
       <div class="card">
@@ -84,9 +66,11 @@
           <h4>Upload New Scan</h4>
         </div>
         <div class="card-body">
-          <div class="alert alert-success alert-dismissible show fade"> Pop me up if upload success. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <div class="alert alert-success alert-dismissible show fade">
+            Pop me up if upload success.
           </div>
-          <div class="alert alert-danger alert-dismissible show fade"> Pop me up if upload got any issue. <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <div class="alert alert-danger alert-dismissible show fade">
+            Pop me up if upload got any issue.
           </div>
         </div>
         <div class="card-body">
@@ -94,43 +78,43 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="scanDate" class="form-label">Scan Date</label>
-                  <input type="date" name="scandate" id="scandate" class="form-control" placeholder="Scan Date">
-                </div>
-                <br>
+                  <label for="scanDate" class="form-label">Scan Date</label> <input type="date" name="scandate" id="scandate" class="form-control" placeholder="Scan Date">
+                </div><br>
                 <div class="form-group">
-                  <label for="gender" class="form-label">Plugin Source</label>
-                  <select name="gender" id="gender" class="form-control">
-                    <option selected="">Select source...</option>
-                    <option value="manual">Manual (Pentest)</option>
-                    <option value="nessus">Nessus</option>
-                    <option value="crowdstrike">Crowdstrike</option>
+                  <label for="gender" class="form-label">Plugin Source</label> <select name="gender" id="gender" class="form-control">
+                    <option selected>
+                      Select source...
+                    </option>
+                    <option value="manual">
+                      Manual (Pentest)
+                    </option>
+                    <option value="nessus">
+                      Nessus
+                    </option>
+                    <option value="crowdstrike">
+                      Crowdstrike
+                    </option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="formFileLg" class="form-label">File Upload</label>
-                  <input class="form-control form-control" id="formFile" type="file">
-                </div>
-                <br>
+                  <label for="formFileLg" class="form-label">File Upload</label> <input class="form-control form-control" id="formFile" type="file">
+                </div><br>
                 <div class="form-group">
                   <ul class="list-unstyled mb-0">
                     <li class="d-inline-block me-2 mb-1">
                       <div class="form-check">
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="form-check-input form-check-danger" checked="" name="customCheck" id="customColorCheck4">
-                          <label class="form-check-label" for="customColorCheck4">
-                            <p>Uncheck to skip processing new findings.</p>
-                          </label>
+                          <input type="checkbox" class="form-check-input form-check-danger" checked name="customCheck" id="customColorCheck4">
+                          <p><label class="form-check-label" for="customColorCheck4">Uncheck to skip processing new findings.</label></p>
                         </div>
                         <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="form-check-input form-check-danger" name="customCheck" id="customColorCheck5">
-                          <label class="form-check-label" for="customColorCheck5">
-                            <p>Check to allow other projects to update this project's status.</p>
-                          </label>
+                          <p><label class="form-check-label" for="customColorCheck5">Check to allow other projects to update this project's status.</label></p>
                         </div>
                       </div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -146,64 +130,65 @@
         </div>
         <div class="card-body">
           <div class="col-md-12 mb-1">
-            <br />
+            <br>
             <form>
               <div class="form-group" align="left">
-              <label for="name" class="form-label">Escalation Points</label>
-              <select class="choices form-select multiple-remove" multiple="multiple">
-                <optgroup label="Select affected host">
-                  <option value="Rahmat">CISO Office</option>
-                  <option value="Mega">Tuan Sau Wern</option>
-                  <option value="Abu">Lewis Low</option>
-                  <option value="Ali">Liew Yin Fong</option>
-                  <option value="Ali">Bala Murugan</option>
-                </optgroup>
-              </select>
-            </div>
+                <label for="name" class="form-label">Escalation Points</label> <select class="choices form-select multiple-remove" multiple="multiple">
+                  <optgroup label="Select affected host">
+                    <option value="Rahmat">
+                      CISO Office
+                    </option>
+                    <option value="Mega">
+                      Tuan Sau Wern
+                    </option>
+                    <option value="Abu">
+                      Lewis Low
+                    </option>
+                    <option value="Ali">
+                      Liew Yin Fong
+                    </option>
+                    <option value="Ali">
+                      Bala Murugan
+                    </option>
+                  </optgroup>
+                </select>
+              </div>
+            </form>
           </div>
           <div class="col-md-12 mb-1">
-            <br />
-            <p> Please select the frequency at which you would like to send the SLA breach report to the escalation point: </p>
+            <br>
+            <p>Please select the frequency at which you would like to send the SLA breach report to the escalation point:</p>
             <ul class="list-unstyled mb-0">
               <li class="d-inline-block me-2 mb-1">
                 <div class="form-check">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="form-check-input form-check-primary" checked name="customCheck" id="customColorCheck1">
-                    <label class="form-check-label" for="customColorCheck1">Weekly</label>
+                    <input type="checkbox" class="form-check-input form-check-primary" checked name="customCheck" id="customColorCheck1"> <label class="form-check-label" for="customColorCheck1">Weekly</label>
                   </div>
                 </div>
               </li>
               <li class="d-inline-block me-2 mb-1">
                 <div class="form-check">
                   <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="form-check-input form-check-primary" checked name="customCheck" id="customColorCheck1">
-                    <label class="form-check-label" for="customColorCheck1">Monthly</label>
+                    <input type="checkbox" class="form-check-input form-check-primary" checked name="customCheck" id="customColorCheck1"> <label class="form-check-label" for="customColorCheck1">Monthly</label>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
           <div class="col-md-12 mb-1">
-            <br />
+            <br>
             <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">
-                <i class="fa fa-laptop-code"></i>
-              </span>
-              <input type="text" class="form-control" placeholder="d657fgg7rd67f8g7td6rfr@$e6g87hyguhi" aria-label="API Key" aria-describedby="button-addon2">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Generate API Key</button>
+              <span class="input-group-text" id="basic-addon1"></span> <input type="text" class="form-control" placeholder="d657fgg7rd67f8g7td6rfr@$e6g87hyguhi" aria-label="API Key" aria-describedby="button-addon2"> <button class="btn btn-outline-secondary" type="button" id="button-addon2">Generate API Key</button>
             </div>
           </div>
           <div class="col-md-12 mb-1">
-            <br />
+            <br>
             <button type="submit" class="btn btn-primary btn btn-primary w-100">Save</button>
           </div>
         </div>
       </div>
     </div>
-      </form>
   </section>
-  <!--EO Row2-->
-  <!--Row3-->
   <section class="row">
     <div class="col-4">
       <div class="card">
@@ -211,8 +196,7 @@
           <h4>Vulnerability Chart</h4>
         </div>
         <div class="card-body">
-          <div id="risk"></div>
-          <br>
+          <div id="risk"></div><br>
         </div>
       </div>
     </div>
@@ -227,60 +211,74 @@
       </div>
     </div>
   </section>
-  <!--EO Row3-->
-  <!--Row4-->
   <section class="row">
-    <!-- Card 1 -->
     <div class="col-6">
       <div class="card">
         <div class="card-body">
           <div class="col-12">
-              <form>
-            <h6>Select View</h6>
-            <div class="input-group mb-3">
-              <select class="form-select" id="inputGroupSelect01">
-                <option selected="">Choose Action</option>
-                <!--<option value="fip">By Host</option>-->
-                <option value="fn">View : Simplified</option>
-                <option value="frisk">View : Detailed</option>
-                <!--<option value="fr">Download Remarks</option>-->
-                <option value="fsla">Filter by SLA Breach</option>
-                <option value="fia">Filter by Asset</option>
-                <option value="fiep">Filter by Exception (Process)</option>
-                <option value="fiem">Filter by Exception (Manual Close)</option>
-                <option value="fie">Filter by Exception (All)</option>
-              </select>
-              <label class="input-group-text" for="inputGroupSelect01">Confirm</label>
-            </div>
-              </form>
+            <form>
+              <h6>Select View</h6>
+              <div class="input-group mb-3">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>
+                    Choose Action
+                  </option>
+                  <option value="fn">
+                    View : Simplified
+                  </option>
+                  <option value="frisk">
+                    View : Detailed
+                  </option>
+                  <option value="fsla">
+                    Filter by SLA Breach
+                  </option>
+                  <option value="fia">
+                    Filter by Asset
+                  </option>
+                  <option value="fiep">
+                    Filter by Exception (Process)
+                  </option>
+                  <option value="fiem">
+                    Filter by Exception (Manual Close)
+                  </option>
+                  <option value="fie">
+                    Filter by Exception (All)
+                  </option>
+                </select> <label class="input-group-text" for="inputGroupSelect01">Confirm</label>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <!-- Card 2 -->
     <div class="col-6">
       <div class="card">
         <div class="card-body">
           <div class="col-12">
             <h6>Download Report</h6>
             <div class="input-group mb-3">
-                <form>
-              <select class="form-select" id="inputGroupSelect01">
-                <option selected="">Compare Date...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-              <label class="input-group-text" for="inputGroupSelect01">Download</label>
-            </div>
+              <form>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>
+                    Compare Date...
+                  </option>
+                  <option value="1">
+                    One
+                  </option>
+                  <option value="2">
+                    Two
+                  </option>
+                  <option value="3">
+                    Three
+                  </option>
+                </select> <label class="input-group-text" for="inputGroupSelect01">Download</label>
               </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!--EO Row4-->
-  <!--Row3-->
   <section class="row">
     <div class="col-12">
       <div class="card">
@@ -302,159 +300,137 @@
               <tbody>
                 <tr>
                   <td class="text-bold-500">
-                    <a href="findings.html">KB5048661: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2024) &nbsp; <i class="fas fa-biohazard" title="High-Priority" style="color: red;"></i>&nbsp; </a>
+                    <a href="findings.html">KB5048661: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2024) &nbsp; &nbsp;</a>
                   </td>
                   <td class="text-bold-500">Nessus</td>
-                  <td align="center">
-                    <span class="badge" style="background-color: maroon;">
-                      <i class="bi bi-exclamation-octagon me-1 text-white"></i> Critical <span class="badge rounded-pill bg-white text-dark"> 5</span>
-                    </span>
-                  </td>
+                  <td align="center"><span class="badge" style="background-color: maroon;">Critical <span class="badge rounded-pill bg-white text-dark">5</span></span></td>
                   <td>
                     <pre style="white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;width: 100%;border: 0px solid #ccc;padding: 10px;">
-																									<b>PIC:</b> Iqbal 
+                                                                                                                                                                                                        <b>PIC:</b> Iqbal 
 
-																									<b>Target Remediation Date:</b>  n/a
+                                                                                                                                                                                                        <b>Target Remediation Date:</b>  n/a
 
-																									<b>Delay Reason (if any):</b> still in testing phase with mahatir 
+                                                                                                                                                                                                        <b>Delay Reason (if any):</b> still in testing phase with mahatir 
 
-																									<b>ITSE Remarks:</b>
-																								</pre>
+                                                                                                                                                                                                        <b>ITSE Remarks:</b>
+                                                                                                                                                                                                </pre>
                   </td>
                   <td align="center">
                     <div class="modal-danger me-1 mb-1 d-inline-block">
-                      <!-- Button with Icon -->
-                      <button type="button" style="border: none; background: none; padding: 0; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#danger">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                      </button>
-                      <!--Danger theme Modal -->
                       <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-left modal-dialog-scrollable" role="document">
                           <div class="modal-content">
                             <div class="modal-header bg-danger">
-                              <h5 class="modal-title white" id="myModalLabel120">High Risk Action </h5>
-                              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <i data-feather="x"></i>
-                              </button>
+                              <h5 class="modal-title white" id="myModalLabel120">High Risk Action</h5>
                             </div>
                             <div class="modal-body">
                               <div class="form-group" align="left">
-                                <label for="name" class="form-label">Host (default: all)</label>
-                                <select class="choices form-select multiple-remove" multiple="multiple">
+                                <label for="name" class="form-label">Host (default: all)</label> <select class="choices form-select multiple-remove" multiple="multiple">
                                   <optgroup label="Select affected host">
-                                    <option value="Rahmat">192.168.0.1</option>
-                                    <option value="Mega">192.168.1.1</option>
-                                    <option value="Abu">192.168.1.2</option>
-                                    <option value="Ali">192.168.1.3</option>
+                                    <option value="Rahmat">
+                                      192.168.0.1
+                                    </option>
+                                    <option value="Mega">
+                                      192.168.1.1
+                                    </option>
+                                    <option value="Abu">
+                                      192.168.1.2
+                                    </option>
+                                    <option value="Ali">
+                                      192.168.1.3
+                                    </option>
                                   </optgroup>
                                 </select>
                               </div>
                               <div class="form-group" align="left">
                                 <div class="form-group">
-                                  <label for="selectOption">Action</label>
-                                  <select class="form-control" id="selectOptionz" required>
-                                    <option value="" disabled selected>Select an action</option>
-                                    <option value="option1">Exemption</option>
-                                    <option value="option2">Not Applicable</option>
-                                    <option value="option3">Invalid</option>
-                                    <option value="option3">Duplicate</option>
+                                  <label for="selectOption">Action</label> <select class="form-control" id="selectOptionz" required="">
+                                    <option value="" disabled selected>
+                                      Select an action
+                                    </option>
+                                    <option value="option1">
+                                      Exemption
+                                    </option>
+                                    <option value="option2">
+                                      Not Applicable
+                                    </option>
+                                    <option value="option3">
+                                      Invalid
+                                    </option>
+                                    <option value="option3">
+                                      Duplicate
+                                    </option>
                                   </select>
                                 </div>
                                 <div class="form-group" align="left">
-                                  <label for="birthday" class="form-label">Action valid until</label>
-                                  <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
+                                  <label for="birthday" class="form-label">Action valid until</label> <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
                                 </div>
                                 <div class="form-group" align="left">
-                                  <label for="birthday" class="form-label">Remarks</label>
-                                  <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
+                                  <label for="birthday" class="form-label">Remarks</label> <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
                                 </div>
                               </div>
                               <div class="modal-footer">
-                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                  <i class="bx bx-x d-block d-sm-none"></i>
-                                  <span class="d-none d-sm-block">Close</span>
-                                </button>
-                                <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal">
-                                  <i class="bx bx-check d-block d-sm-none"></i>
-                                  <span class="d-none d-sm-block">Confirm</span>
-                                </button>
-                                </form>
+                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><span class="d-none d-sm-block">Close</span></button> <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal"><span class="d-none d-sm-block">Confirm</span></button>
                               </div>
-                              </form>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
                   </td>
                 </tr>
                 <tr>
                   <td class="text-bold-500">VMware Tools 10.3.x / 11.x / 12.x 12.3.5 Token Bypass (VMSA-2023-0024)</td>
                   <td class="text-bold-500">Nessus</td>
-                  <td align="center">
-                    <span class="badge" style="background-color: red;">
-                      <i class="bi bi-exclamation-octagon me-1 text-white"></i> High <span class="badge rounded-pill bg-white text-dark"> -308</span>
-                    </span>
-                  </td>
+                  <td align="center"><span class="badge" style="background-color: red;">High <span class="badge rounded-pill bg-white text-dark">-308</span></span></td>
                   <td>
                     <pre style="white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;width: 100%;border: 0px solid #ccc;padding: 10px;">
-																										<b>PIC:</b> Iqbal
+                                                                                                                                                                                                                <b>PIC:</b> Iqbal
 
-																										<b>Target Remediation Date:</b>  n/a
+                                                                                                                                                                                                                <b>Target Remediation Date:</b>  n/a
 
-																										<b>Delay Reason (if any):</b> waiting for the reboot, this fixes will applied once rebooted the servers
+                                                                                                                                                                                                                <b>Delay Reason (if any):</b> waiting for the reboot, this fixes will applied once rebooted the servers
 
-																										<b>ITSE Remarks:</b>
-																									</pre>
+                                                                                                                                                                                                                <b>ITSE Remarks:</b>
+                                                                                                                                                                                                        </pre>
                   </td>
                   <td align="center">
                     <div class="modal-danger me-1 mb-1 d-inline-block">
-                      <!-- Button with Icon -->
-                      <button type="button" style="border: none; background: none; padding: 0; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#danger">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                      </button>
-                      <!--Danger theme Modal -->
                       <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-left modal-dialog-scrollable" role="document">
                           <div class="modal-content">
                             <div class="modal-header bg-danger">
-                              <h5 class="modal-title white" id="myModalLabel120">High Risk Action </h5>
-                              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <i data-feather="x"></i>
-                              </button>
+                              <h5 class="modal-title white" id="myModalLabel120">High Risk Action</h5>
                             </div>
                             <div class="modal-body">
                               <div class="form-group" align="left">
-                                <label for="name" class="form-label">Host (if not affect all)</label>
-                                <select class="choices form-select multiple-remove" multiple="multiple">
+                                <label for="name" class="form-label">Host (if not affect all)</label> <select class="choices form-select multiple-remove" multiple="multiple">
                                   <optgroup label="Select affected host">
-                                    <option value="Rahmat">192.168.0.1</option>
-                                    <option value="Mega">192.168.1.1</option>
-                                    <option value="Abu">192.168.1.2</option>
-                                    <option value="Ali">192.168.1.3</option>
+                                    <option value="Rahmat">
+                                      192.168.0.1
+                                    </option>
+                                    <option value="Mega">
+                                      192.168.1.1
+                                    </option>
+                                    <option value="Abu">
+                                      192.168.1.2
+                                    </option>
+                                    <option value="Ali">
+                                      192.168.1.3
+                                    </option>
                                   </optgroup>
                                 </select>
                               </div>
                               <div class="form-group" align="left">
-                                <label for="birthday" class="form-label">Exclude until</label>
-                                <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
+                                <label for="birthday" class="form-label">Exclude until</label> <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
                               </div>
                               <div class="form-group" align="left">
-                                <label for="birthday" class="form-label">Remarks</label>
-                                <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
+                                <label for="birthday" class="form-label">Remarks</label> <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
                               </div>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                <i class="bx bx-x d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Close</span>
-                              </button>
-                              <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal">
-                                <i class="bx bx-check d-block d-sm-none"></i>
-                                <span class="d-none d-sm-block">Confirm</span>
-                              </button>
-                              </form>
+                              <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><span class="d-none d-sm-block">Close</span></button> <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal"><span class="d-none d-sm-block">Confirm</span></button>
                             </div>
-                            </form>
                           </div>
                         </div>
                       </div>
@@ -463,90 +439,85 @@
                 </tr>
                 <tr>
                   <td class="text-bold-500">
-                    <a href="findings.html">KB5048661: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2024) &nbsp; <i class="fas fa-biohazard" data-bs-toggle="tooltip" title="High-Priority" style="color: red;"></i>&nbsp; <i class="fas fa-shield" data-bs-toggle="tooltip" title="Air-Gapped" style="color: green;"></i>
-                    </a>
+                    <a href="findings.html">KB5048661: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2024) &nbsp; &nbsp;</a>
                   </td>
                   <td class="text-bold-500">Nessus</td>
-                  <td align="center">
-                    <span class="badge" style="background-color: Orange;">
-                      <i class="bi bi-exclamation-octagon me-1 text-white"></i> Medium <span class="badge rounded-pill bg-white text-dark"> 65</span>
-                    </span>
-                  </td>
+                  <td align="center"><span class="badge" style="background-color: Orange;">Medium <span class="badge rounded-pill bg-white text-dark">65</span></span></td>
                   <td>
                     <pre style="white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;width: 100%;border: 0px solid #ccc;padding: 10px;">
-																										<b>PIC:</b> Iqbal 
+                                                                                                                                                                                                                <b>PIC:</b> Iqbal 
 
-																										<b>Target Remediation Date:</b>  n/a
+                                                                                                                                                                                                                <b>Target Remediation Date:</b>  n/a
 
-																										<b>Delay Reason (if any):</b> still in testing phase with mahatir 
+                                                                                                                                                                                                                <b>Delay Reason (if any):</b> still in testing phase with mahatir 
 
-																										<b>ITSE Remarks:</b>
-																									</pre>
+                                                                                                                                                                                                                <b>ITSE Remarks:</b>
+                                                                                                                                                                                                        </pre>
                   </td>
                   <td align="center">
                     <div class="modal-danger me-1 mb-1 d-inline-block">
-                        <form>
-                      <!-- Button with Icon -->
-                      <button type="button" style="border: none; background: none; padding: 0; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#danger">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                      </button>
-                      <!--Danger theme Modal -->
-                      <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-left modal-dialog-scrollable" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header bg-danger">
-                              <h5 class="modal-title white" id="myModalLabel120">High Risk Action </h5>
-                              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <i data-feather="x"></i>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <div class="form-group" align="left">
-                                <label for="name" class="form-label">Host (default: all)</label>
-                                <select class="choices form-select multiple-remove" multiple="multiple">
-                                  <optgroup label="Select affected host">
-                                    <option value="Rahmat">192.168.0.1</option>
-                                    <option value="Mega">192.168.1.1</option>
-                                    <option value="Abu">192.168.1.2</option>
-                                    <option value="Ali">192.168.1.3</option>
-                                  </optgroup>
-                                </select>
+                      <form>
+                        <div class="modal fade text-left" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel120" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-left modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header bg-danger">
+                                <h5 class="modal-title white" id="myModalLabel120">High Risk Action</h5>
                               </div>
-                              <div class="form-group" align="left">
-                                <div class="form-group">
-                                  <label for="selectOption">Action</label>
-                                  <select class="form-control" id="selectOptionz" required>
-                                    <option value="" disabled selected>Select an action</option>
-                                    <option value="option1">Exemption</option>
-                                    <option value="option2">Not Applicable</option>
-                                    <option value="option3">Invalid</option>
-                                    <option value="option3">Duplicate</option>
+                              <div class="modal-body">
+                                <div class="form-group" align="left">
+                                  <label for="name" class="form-label">Host (default: all)</label> <select class="choices form-select multiple-remove" multiple="multiple">
+                                    <optgroup label="Select affected host">
+                                      <option value="Rahmat">
+                                        192.168.0.1
+                                      </option>
+                                      <option value="Mega">
+                                        192.168.1.1
+                                      </option>
+                                      <option value="Abu">
+                                        192.168.1.2
+                                      </option>
+                                      <option value="Ali">
+                                        192.168.1.3
+                                      </option>
+                                    </optgroup>
                                   </select>
                                 </div>
                                 <div class="form-group" align="left">
-                                  <label for="birthday" class="form-label">Action valid until</label>
-                                  <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
+                                  <div class="form-group">
+                                    <label for="selectOption">Action</label> <select class="form-control" id="selectOptionz" required="">
+                                      <option value="" disabled selected>
+                                        Select an action
+                                      </option>
+                                      <option value="option1">
+                                        Exemption
+                                      </option>
+                                      <option value="option2">
+                                        Not Applicable
+                                      </option>
+                                      <option value="option3">
+                                        Invalid
+                                      </option>
+                                      <option value="option3">
+                                        Duplicate
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group" align="left">
+                                    <label for="birthday" class="form-label">Action valid until</label> <input type="date" name="target_date" id="target_date" class="form-control" placeholder="Target Remediation Date">
+                                  </div>
+                                  <div class="form-group" align="left">
+                                    <label for="birthday" class="form-label">Remarks</label> <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
+                                  </div>
                                 </div>
-                                <div class="form-group" align="left">
-                                  <label for="birthday" class="form-label">Remarks</label>
-                                  <input type="text" class="form-control" id="basicInput" placeholder="Remarks, evidence URL">
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><span class="d-none d-sm-block">Close</span></button> <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal"><span class="d-none d-sm-block">Confirm</span></button>
                                 </div>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
-                                  <i class="bx bx-x d-block d-sm-none"></i>
-                                  <span class="d-none d-sm-block">Close</span>
-                                </button>
-                                <button type="button" class="btn btn-danger ms-1" data-bs-dismiss="modal">
-                                  <i class="bx bx-check d-block d-sm-none"></i>
-                                  <span class="d-none d-sm-block">Confirm</span>
-                                </button>
-                                </form>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </form>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -575,13 +546,14 @@
           </nav>
         </div>
       </div>
+    </div>
   </section>
-  <!--EO Row3-->
-</div> {% endblock %} {% block js %} <script src="assets/extensions/dayjs/dayjs.min.js"></script>
-<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
+</div>{% endblock %} {% block js %} 
+<script src="assets/extensions/dayjs/dayjs.min.js"></script> 
+<script src="assets/extensions/apexcharts/apexcharts.min.js"></script> 
 <script src="assets/static/js/pages/ui-apexchart.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
-<script src="assets/static/js/pages/ckeditor.js"></script>
-<script src="assets/extensions/choices.js/public/assets/scripts/choices.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script> 
+<script src="assets/static/js/pages/ckeditor.js"></script> 
+<script src="assets/extensions/choices.js/public/assets/scripts/choices.js"></script> 
 <script src="assets/static/js/pages/form-element-select.js"></script> {% endblock %}
