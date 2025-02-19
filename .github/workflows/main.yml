@@ -19,6 +19,12 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install Dependencies and Prepare
         run: |
           npm install --legacy-peer-deps --ignore-scripts
@@ -40,6 +46,12 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install Dependencies
         run: npm install --legacy-peer-deps --ignore-scripts
 
@@ -60,7 +72,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-  
+
       - name: Run SonarQube Scan via Docker
         env:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -75,13 +87,13 @@ jobs:
             -Dsonar.sources=src \
             -Dsonar.report.export.path=sonar-report.json
         continue-on-error: true
-  
+
       - name: Upload Sonar Scan Artifact
         uses: actions/upload-artifact@v3
         with:
           name: sonar-scan-report
           path: sonar-report.json
-  
+
   build_deploy_uat:
     name: Build & Deploy to UAT
     runs-on: ubuntu-latest
@@ -93,18 +105,13 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Build Docker Image
-        run: docker build -t sentinel-wireframe:latest -f Dockerfile .
-
-      - name: List Docker Images
-        run: docker images
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v2
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Push Docker Image
-        if: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest
+          context: .
+          file: Dockerfile
+          push: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
