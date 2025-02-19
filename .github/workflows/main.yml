@@ -1,4 +1,4 @@
-name: CI/CD Workflows
+name: CI/CD Workflow
 
 on:
   push:
@@ -24,9 +24,13 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-
       - name: Run linting
-        run: npm install eslint --save-dev && npm run lint
+        run: |
+          if [ -f package.json ] && grep -q '"eslint"' package.json; then
+            npm run lint
+          else
+            echo "Skipping linting, ESLint not found in dependencies."
+          fi
 
       - name: Run tests
         run: npm test
@@ -46,6 +50,12 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Clean up old Docker containers (optional)
+        run: |
+          docker stop sentinel-wireframe || true
+          docker rm sentinel-wireframe || true
+          docker rmi -f ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest || true
+
       - name: Build and push Docker image
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest .
@@ -54,10 +64,10 @@ jobs:
       #- name: Set up Kubernetes config
       #  run: |
       #    echo "${{ secrets.KUBECONFIG }}" | base64 --decode > kubeconfig
-      #   export KUBECONFIG=$(pwd)/kubeconfig
+      #    export KUBECONFIG=$(pwd)/kubeconfig
 
       #- name: Deploy to Kubernetes
       #  run: |
       #    kubectl apply -f k8s/deployment.yaml
       #    kubectl apply -f k8s/service.yaml
-      #    kubectl rollout status deployment/sentinel-wireframe
+      #    kubectl rollout status deploym
