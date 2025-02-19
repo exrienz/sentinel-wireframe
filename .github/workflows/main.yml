@@ -50,13 +50,13 @@ jobs:
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest
 
-      - name: Set up Kubernetes config
-        run: |
-          echo "${{ secrets.KUBECONFIG }}" | base64 --decode > kubeconfig
-          export KUBECONFIG=$(pwd)/kubeconfig
+      #- name: Set up Kubernetes config
+      #  run: |
+      #    echo "${{ secrets.KUBECONFIG }}" | base64 --decode > kubeconfig
+      #   export KUBECONFIG=$(pwd)/kubeconfig
 
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml
-          kubectl rollout status deployment/sentinel-wireframe
+      #- name: Deploy to Kubernetes
+      #  run: |
+      #    kubectl apply -f k8s/deployment.yaml
+      #    kubectl apply -f k8s/service.yaml
+      #    kubectl rollout status deployment/sentinel-wireframe
