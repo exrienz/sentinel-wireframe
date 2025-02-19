@@ -7,7 +7,6 @@ on:
     branches: [ main ]
 
 jobs:
-
   build:
     runs-on: self-hosted
     env:
@@ -28,7 +27,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-    
+
   sca_check:
     name: Software Composition Analysis (SCA)
     runs-on: self-hosted
@@ -53,31 +52,27 @@ jobs:
         run: npm audit --audit-level=moderate
         continue-on-error: true
 
-  # ---------------------------
-  # 3. Static Application Security Testing (SAST) with SonarQube
-  # ---------------------------
   sast_analysis:
     name: SAST Analysis (SonarQube)
     runs-on: self-hosted
     needs: sca_check
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
   
-     - name: Setup Node.js Environment
-        uses: actions/setup-node@v3    # See [7] for details on the setup-node action [[7]]
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
   
       - name: Run SonarQube Scan
         env:
-          # SONAR_TOKEN should be stored securely in GitHub Secrets.
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           sonar-scanner \
             -Dsonar.projectKey=sentinel-wireframe \
             -Dsonar.sources=src \
-            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}\
+            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         continue-on-error: true
   
@@ -96,7 +91,7 @@ jobs:
         run: docker build -t sentinel-wireframe:latest -f Dockerfile .
 
       - name: Push Docker Image
-        if: env.DOCKERHUB_USERNAME != '' && env.DOCKERHUB_PASSWORD != ''
+        if: ${{ env.DOCKERHUB_USERNAME != '' && env.DOCKERHUB_PASSWORD != '' }}
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
