@@ -83,7 +83,7 @@ jobs:
             -e SONAR_TOKEN="${SONAR_TOKEN}" \
             -v "${GITHUB_WORKSPACE}:/usr/src" \
             sonarsource/sonar-scanner-cli \
-            -Dsonar.projectKey=sentinel-wireframe \
+            -Dsonar.projectKey={{ secrets.PROJECT_NAME }} \
             -Dsonar.sources=src \
             -Dsonar.report.export.path=sonar-report.json
         continue-on-error: true
@@ -117,4 +117,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sentinel-wireframe:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/{{ secrets.PROJECT_NAME }}:latest
