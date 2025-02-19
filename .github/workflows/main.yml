@@ -38,10 +38,14 @@ jobs:
 
       - name: Install Talisman CLI
         run: |
-          curl -L https://thoughtworks.github.io/talisman/install.sh | bash
+          curl --silent https://raw.githubusercontent.com/thoughtworks/talisman/main/global_install_scripts/install.bash > /tmp/install_talisman.bash
+          /bin/bash /tmp/install_talisman.bash
+          echo 'export PATH=$PATH:$HOME/.talisman/bin' >> ~/.bashrc
+          source ~/.bashrc
 
       - name: Run Talisman Secret Scan
         run: talisman --scan .
+
   
   sca_check:
     name: Software Composition Analysis (SCA)
