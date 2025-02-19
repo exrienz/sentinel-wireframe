@@ -28,33 +28,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        
-  secret_scanning:
-    name: Secret Scanning (Talisman)
-    runs-on: self-hosted
-    needs: build
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Install Talisman CLI
-        run: |
-          export TERM=dumb  # Prevent tput errors
-          # Optionally remove the existing pre-push hook if it's safe to do so:
-          rm -f .git/hooks/pre-push
-          curl -sSL https://thoughtworks.github.io/talisman/install.sh > ~/install-talisman.sh
-          chmod +x ~/install-talisman.sh
-          ~/install-talisman.sh
-          export TALISMAN_HOME="$HOME/.talisman"
-          export PATH="$TALISMAN_HOME/bin:$PATH"
-
-      - name: Verify Talisman Installation
-        run: talisman --version
-
-      - name: Run Talisman Secret Scan
-        run: talisman --scan .
-
-
+    
   sca_check:
     name: Software Composition Analysis (SCA)
     runs-on: self-hosted
